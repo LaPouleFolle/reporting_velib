@@ -7,17 +7,18 @@ Il s'agit d'un jeu de données sur la disponibilité des vélos en libre-service
 
 
 #### Dictionnaire de donnée 
-Identifiant station : code unique ou code primaire d'identification des stations
-Nom station : Libellé de l'emplacement
-Station en fonctionnement : c’est l’état de la station  (OUI/NON)
-Nombre bornette libre : 
-Capacité de la station : Nombre total des bornes
-Nombre total vélos disponibles : Somme des vélos mécaniques et électriques
-Vélos mécaniques disponibles : Nombre de vélos classiques disponible
-Vélos électriques disponibles : Nombre de vélos électrique disponible 
-Nom communes équipées : Nom de la commune 
-Code INSEE communes équipées : Code administratif de la commune
-Coordonnées géographiques : Latitude et Longitude de la station
+- Identifiant station - stationcode : code unique ou code primaire d'identification des stations
+- Nom station - name : Libellé de l'emplacement
+- Station en fonctionnement - is_installed : c’est l’état de la station  (OUI/NON)
+- Nombre bornette libre - capacity : 
+- Capacité de la station - numdocksavailable: Nombre total des bornes
+- Nombre total vélos disponibles - numbikesavailable : Somme des vélos mécaniques et électriques
+- Vélos mécaniques disponibles - mechanical : Nombre de vélos classiques disponible
+- Vélos électriques disponibles - ebike : Nombre de vélos électrique disponible 
+- Nom communes équipées - nom_arrondissement_communes: Nom de la commune 
+- occupation_rate : taux d'occupation de la station
+- Code INSEE communes équipées - code_insee_commune : Code administratif de la commune
+- Coordonnées géographiques - zone : Latitude et Longitude de la station
 
 ### Source de donnée
 
