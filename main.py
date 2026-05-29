@@ -1,11 +1,12 @@
 import os
 import pandas as pd
 import s3fs
-from src.utils import clean_data, compute_bike_mix, compute_commune_analysis
 from src.report import generate_excel_report
 
 def main():
-    # Connexion à Onyxia (je devrai modifier cette façon de se connecter comme la suggérer le prof)
+    print("Démarrage du pipeline Vélib' (Création complète de zéro)...")
+
+    # 1. Connexion sécurisée à Onyxia
     fs = s3fs.S3FileSystem(
         key=os.environ.get("AWS_ACCESS_KEY_ID"),
         secret=os.environ.get("AWS_SECRET_ACCESS_KEY"),
@@ -13,24 +14,25 @@ def main():
         client_kwargs={'endpoint_url': 'https://minio.lab.sspcloud.fr'}
     )
     
-    # Chemin du fichier Parquet
     URL_S3 = "demon/velib/data/brute/velib-disponibilite-en-temps-reel.parquet"
     
-    # chargement des données à jour
+    # 2. Chargement des données brutes
+    print("Récupération des données en direct...")
     with fs.open(URL_S3, mode='rb') as f:
         df = pd.read_parquet(f)
-    print(f"mes data ({len(df)}")
-
-    # Nettoyage des donnée et calculs
-    df = clean_data(df)
-    mix_results = compute_bike_mix(df)
-    df_communes = compute_commune_analysis(df)
-
-    # on va généré le rapport Excel
-    ## mettre un titre avec un print("création du rapport?")
-    generate_excel_report(df_communes, mix_results, output_path="data/rapport_velib.xlsx")
     
-    print("Fin du programme")
+    # --- NETTOYAGE DES DATES POUR EXCEL ---
+    # On détecte les colonnes de type date et on retire le fuseau horaire
+    for col in df.columns:
+        if pd.api.types.is_datetime64_any_dtype(df[col]):
+            if df[col].dt.tz is not None:
+                df[col] = df[col].dt.tz_localize(None)
+                
+    # 3. Génération autonome du rapport Excel
+    print("Création des onglets, des formules et du graphique...")
+    generate_excel_report(df, output_path="data/rapport_velib.xlsx")
+    
+    print("Fin du programme. Le fichier Excel est complet et le graphique est vivant !")
 
 if __name__ == "__main__":
     main()
