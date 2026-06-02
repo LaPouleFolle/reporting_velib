@@ -4,7 +4,6 @@ import s3fs
 from src.report import generate_excel_report
 
 def main():
-    print("Démarrage du pipeline Vélib' (Création complète de zéro)...")
 
     # connexion à Onyxia
     fs = s3fs.S3FileSystem(
