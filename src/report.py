@@ -75,6 +75,10 @@ def generate_excel_report(df_raw, output_path="data/rapport_velib.xlsx"):
     ws["A14"] = "Total vélos vérifié"
     ws["B14"] = "=SUM(B12:B13)"
 
+    ws["A17"] = "Top Commune les plus desservie"
+    ws["A17"].font = Font(bold=True, underline="single")
+
+
     # Graphique en secteur
     pie = PieChart()
     pie.title = "Types de vélos disponibles"
@@ -100,6 +104,28 @@ def generate_excel_report(df_raw, output_path="data/rapport_velib.xlsx"):
     bar.legend = None
 
     ws.add_chart(bar, "E18")
+
+    # top 5 des communes 
+    communes = ["Paris", "Boulogne-Billancourt", "Montreuil", "Nanterre", "Asnières-sur-Seine"]
+    
+    for i, commune in enumerate(communes):
+        ligne = 18 + i
+        ws["A" + str(ligne)] = commune
+        ws["B" + str(ligne)] = f'=SUMIF(DATA!M:M, "{commune}", DATA!D:D)'
+
+    # barplot du top commune
+    bar_top = BarChart()
+    bar.title = "Top 5 des communes les plus deservie en velo "
+
+    data_top = Reference(ws, min_col=2, min_row=18, max_row=22)
+    labels_top = Reference(ws, min_col=1, min_row=18, max_row=22)
+    
+    bar_top.add_data(data=data_top)
+    bar_top.set_categories(labels_top)
+    bar_top.legend = None
+    
+    # On place ce nouveau graphique plus bas
+    ws.add_chart(bar_top, "E32")
 
     # je sauvegarde quand même
     wb.save(output_path)
