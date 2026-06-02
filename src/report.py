@@ -7,23 +7,23 @@ from openpyxl.chart import BarChart, PieChart, Reference
 
 def generate_excel_report(df_raw, output_path="data/rapport_velib.xlsx"):
 
-    # Créer le dossier si besoin
+    # on créé le dossier
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-    # Créer le fichier Excel avec l'onglet DATA
+    # mon onglet data dans le fichier excel
     with pd.ExcelWriter(output_path, engine="openpyxl") as writer:
         df_raw.to_excel(writer, sheet_name="DATA", index=False)
 
-    # Ouvrir le fichier Excel
+    # ouvertur du fichier
     wb = load_workbook(output_path)
 
-    # Créer l'onglet Indicateurs
+    # l'onglet indicateur ou je vais mettre mes graph
     ws = wb.create_sheet("Indicateurs")
 
-    # Nombre de lignes dans DATA
+    # Nombre de lignes dans mon jeu de donnée, ici je compte avec len() c'est la bonne methode? 
     max_row = len(df_raw) + 1
 
-    # Récupérer les lettres des colonnes automatiquement
+    # je recupere les colonnes 
     headers = list(df_raw.columns)
 
     col_capacity = headers.index("capacity") + 1
@@ -32,7 +32,7 @@ def generate_excel_report(df_raw, output_path="data/rapport_velib.xlsx"):
     col_meca = headers.index("mechanical") + 1
     col_ebike = headers.index("ebike") + 1
 
-    # Convertir les numéros en lettres 
+    # 
     from openpyxl.utils import get_column_letter
 
     col_capacity = get_column_letter(col_capacity)
@@ -41,11 +41,11 @@ def generate_excel_report(df_raw, output_path="data/rapport_velib.xlsx"):
     col_meca = get_column_letter(col_meca)
     col_ebike = get_column_letter(col_ebike)
 
-    # Titre
+    # le titre du rapport
     ws["A3"] = "TABLEAU DE BORD DU RÉSEAU VÉLIB"
     ws["A3"].font = Font(bold=True, size=14)
 
-    # Partie 1 : indicateurs réseau
+    #  indicateurs réseau velib
     ws["A4"] = "Indicateurs Réseau"
     ws["A4"].font = Font(bold=True, underline="single")
 
@@ -62,7 +62,7 @@ def generate_excel_report(df_raw, output_path="data/rapport_velib.xlsx"):
     ws["B8"] = "=B7/B5"
     ws["B8"].number_format = "0.00%"
 
-    # Partie 2 : types de vélos
+    # mes indicateurs sur les types de vélos
     ws["A11"] = "Répartition par type de vélo"
     ws["A11"].font = Font(bold=True, underline="single")
 
@@ -75,7 +75,7 @@ def generate_excel_report(df_raw, output_path="data/rapport_velib.xlsx"):
     ws["A14"] = "Total vélos vérifié"
     ws["B14"] = "=SUM(B12:B13)"
 
-    # Graphique camembert
+    # Graphique en secteur
     pie = PieChart()
     pie.title = "Types de vélos disponibles"
 
@@ -87,7 +87,7 @@ def generate_excel_report(df_raw, output_path="data/rapport_velib.xlsx"):
 
     ws.add_chart(pie, "E4")
 
-    # Graphique en barres
+    # barplot
     bar = BarChart()
     bar.title = "Disponibilité globale du réseau"
     bar.y_axis.title = "Quantité"
@@ -101,8 +101,8 @@ def generate_excel_report(df_raw, output_path="data/rapport_velib.xlsx"):
 
     ws.add_chart(bar, "E18")
 
-    # Sauvegarder
+    # je sauvegarde quand même
     wb.save(output_path)
     wb.close()
 
-    print("Rapport Excel généré :", output_path)
+    print("le fichier excel est op :", output_path)
