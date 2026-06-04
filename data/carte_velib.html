@@ -1,0 +1,3901 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_335196fa5c8dc2b9136c22efb85a9957 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_335196fa5c8dc2b9136c22efb85a9957" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_335196fa5c8dc2b9136c22efb85a9957 = L.map(
+                "map_335196fa5c8dc2b9136c22efb85a9957",
+                {
+                    center: [48.8566, 2.3522],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ea0c4216269ebfeafb4f95b9e533c418 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ea0c4216269ebfeafb4f95b9e533c418.addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var marker_996c0983f516eba15e657087b033c857 = L.marker(
+                [48.865983, 2.275725],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_c73439fe06e050af53835c1ab578a70d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0dd93cf3c45076c0320bbab73521086 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af3ce567b759c9645d61bf31e4aca6f1 = $(`<div id="html_af3ce567b759c9645d61bf31e4aca6f1" style="width: 100.0%; height: 100.0%;">Station : Benjamin Godard - Victor Hugo<br>Vélos disponibles : 2</div>`)[0];
+                popup_c0dd93cf3c45076c0320bbab73521086.setContent(html_af3ce567b759c9645d61bf31e4aca6f1);
+            
+        
+
+        marker_996c0983f516eba15e657087b033c857.bindPopup(popup_c0dd93cf3c45076c0320bbab73521086)
+        ;
+
+        
+    
+    
+                marker_996c0983f516eba15e657087b033c857.setIcon(icon_c73439fe06e050af53835c1ab578a70d);
+            
+    
+            var marker_d011aa960af793b503f370f6234657c6 = L.marker(
+                [48.878370277021, 2.440523876268],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_5b489694fa98a33b87ac77e658b0ade4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a532344dde69ecad43800ffa5d746be4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4dd5c433c9b005edcf2d33b7d6cec07 = $(`<div id="html_b4dd5c433c9b005edcf2d33b7d6cec07" style="width: 100.0%; height: 100.0%;">Station : Charcot - Benfleet<br>Vélos disponibles : 1</div>`)[0];
+                popup_a532344dde69ecad43800ffa5d746be4.setContent(html_b4dd5c433c9b005edcf2d33b7d6cec07);
+            
+        
+
+        marker_d011aa960af793b503f370f6234657c6.bindPopup(popup_a532344dde69ecad43800ffa5d746be4)
+        ;
+
+        
+    
+    
+                marker_d011aa960af793b503f370f6234657c6.setIcon(icon_5b489694fa98a33b87ac77e658b0ade4);
+            
+    
+            var marker_349b393ca009682c123357e2338c2306 = L.marker(
+                [48.87929591733507, 2.3373600840568547],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_894401c39c7bf38fac6a120b570f70c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2ca999d12ecb0ac59e7597eb2a6d905d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4122b68ff43e530e89b16889f52e4ba5 = $(`<div id="html_4122b68ff43e530e89b16889f52e4ba5" style="width: 100.0%; height: 100.0%;">Station : Toudouze - Clauzel<br>Vélos disponibles : 3</div>`)[0];
+                popup_2ca999d12ecb0ac59e7597eb2a6d905d.setContent(html_4122b68ff43e530e89b16889f52e4ba5);
+            
+        
+
+        marker_349b393ca009682c123357e2338c2306.bindPopup(popup_2ca999d12ecb0ac59e7597eb2a6d905d)
+        ;
+
+        
+    
+    
+                marker_349b393ca009682c123357e2338c2306.setIcon(icon_894401c39c7bf38fac6a120b570f70c8);
+            
+    
+            var marker_32ee00abd10d5d2277cedcf8f10047a4 = L.marker(
+                [48.837525839067, 2.3360354080796],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_f8f01d17e2f89d7758fac0869337d955 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99ababc8828c8d3ff9dc6dab45edc789 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4b2c5495ac5d97ce7af24d66b9ce3ac3 = $(`<div id="html_4b2c5495ac5d97ce7af24d66b9ce3ac3" style="width: 100.0%; height: 100.0%;">Station : Cassini - Denfert-Rochereau<br>Vélos disponibles : 10</div>`)[0];
+                popup_99ababc8828c8d3ff9dc6dab45edc789.setContent(html_4b2c5495ac5d97ce7af24d66b9ce3ac3);
+            
+        
+
+        marker_32ee00abd10d5d2277cedcf8f10047a4.bindPopup(popup_99ababc8828c8d3ff9dc6dab45edc789)
+        ;
+
+        
+    
+    
+                marker_32ee00abd10d5d2277cedcf8f10047a4.setIcon(icon_f8f01d17e2f89d7758fac0869337d955);
+            
+    
+            var marker_8da600548e981a4ced17e192a98b99e8 = L.marker(
+                [48.93626891059109, 2.3588666820200914],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_d58be0b99243fe5d7e5026917aca37ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a2ed4f99035b07df3e62802bd4ed6cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80801c52ac2e37bca103682b2c0ddf31 = $(`<div id="html_80801c52ac2e37bca103682b2c0ddf31" style="width: 100.0%; height: 100.0%;">Station : Basilique<br>Vélos disponibles : 9</div>`)[0];
+                popup_3a2ed4f99035b07df3e62802bd4ed6cb.setContent(html_80801c52ac2e37bca103682b2c0ddf31);
+            
+        
+
+        marker_8da600548e981a4ced17e192a98b99e8.bindPopup(popup_3a2ed4f99035b07df3e62802bd4ed6cb)
+        ;
+
+        
+    
+    
+                marker_8da600548e981a4ced17e192a98b99e8.setIcon(icon_d58be0b99243fe5d7e5026917aca37ff);
+            
+    
+            var marker_0fd21cac604cd8f21449f521690bef7e = L.marker(
+                [48.855907555969, 2.3925706744194],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_3171bb8b2c46b81ef433f3bcb5a7475f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c7797d17fdbc4aa63ea7fcfb33accca3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3549c9874212181957a2959d648957c1 = $(`<div id="html_3549c9874212181957a2959d648957c1" style="width: 100.0%; height: 100.0%;">Station : Charonne - Robert et Sonia Delaunay<br>Vélos disponibles : 1</div>`)[0];
+                popup_c7797d17fdbc4aa63ea7fcfb33accca3.setContent(html_3549c9874212181957a2959d648957c1);
+            
+        
+
+        marker_0fd21cac604cd8f21449f521690bef7e.bindPopup(popup_c7797d17fdbc4aa63ea7fcfb33accca3)
+        ;
+
+        
+    
+    
+                marker_0fd21cac604cd8f21449f521690bef7e.setIcon(icon_3171bb8b2c46b81ef433f3bcb5a7475f);
+            
+    
+            var marker_eeb643b82ad026d2a17ef9af7ab08616 = L.marker(
+                [48.875448033960744, 2.315508019010038],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_7f9ebcb19483851430cbea7f71dc3253 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d01da2c57c71ca2e788d9218032fc7b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9422563d78d449340a82747eda0596ba = $(`<div id="html_9422563d78d449340a82747eda0596ba" style="width: 100.0%; height: 100.0%;">Station : Messine - Place Du Pérou<br>Vélos disponibles : 7</div>`)[0];
+                popup_d01da2c57c71ca2e788d9218032fc7b3.setContent(html_9422563d78d449340a82747eda0596ba);
+            
+        
+
+        marker_eeb643b82ad026d2a17ef9af7ab08616.bindPopup(popup_d01da2c57c71ca2e788d9218032fc7b3)
+        ;
+
+        
+    
+    
+                marker_eeb643b82ad026d2a17ef9af7ab08616.setIcon(icon_7f9ebcb19483851430cbea7f71dc3253);
+            
+    
+            var marker_10a5487176d567dacf0ea080d1b528ca = L.marker(
+                [48.85165383178419, 2.3308077827095985],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_88394e5666e365835428430f18669d49 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8523e813edc5c78ddcf9a53836a58d97 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_36fb7bccca285225b5760f42da752ec8 = $(`<div id="html_36fb7bccca285225b5760f42da752ec8" style="width: 100.0%; height: 100.0%;">Station : Saint-Sulpice<br>Vélos disponibles : 6</div>`)[0];
+                popup_8523e813edc5c78ddcf9a53836a58d97.setContent(html_36fb7bccca285225b5760f42da752ec8);
+            
+        
+
+        marker_10a5487176d567dacf0ea080d1b528ca.bindPopup(popup_8523e813edc5c78ddcf9a53836a58d97)
+        ;
+
+        
+    
+    
+                marker_10a5487176d567dacf0ea080d1b528ca.setIcon(icon_88394e5666e365835428430f18669d49);
+            
+    
+            var marker_efeb3a5fb3320e6144dc07e9d2c262ca = L.marker(
+                [48.848563233059, 2.3204218259346],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_785526ed16dbf3fb7e6d8bed392502d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7dc1bab439b2928d20763440d5515e3d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e455ebe62f5f12196cda9426b4771b0 = $(`<div id="html_4e455ebe62f5f12196cda9426b4771b0" style="width: 100.0%; height: 100.0%;">Station : Vaneau - Sèvres<br>Vélos disponibles : 3</div>`)[0];
+                popup_7dc1bab439b2928d20763440d5515e3d.setContent(html_4e455ebe62f5f12196cda9426b4771b0);
+            
+        
+
+        marker_efeb3a5fb3320e6144dc07e9d2c262ca.bindPopup(popup_7dc1bab439b2928d20763440d5515e3d)
+        ;
+
+        
+    
+    
+                marker_efeb3a5fb3320e6144dc07e9d2c262ca.setIcon(icon_785526ed16dbf3fb7e6d8bed392502d7);
+            
+    
+            var marker_02128b4b057f4c09f6dd79ec5c7f8812 = L.marker(
+                [48.862453313908, 2.1961666225454],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_07b2c96e86e4b998a02014f40e21e71d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2feec7387c46db4cbfbe32efa9516a49 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ada84f41d1ee16318cd1525a1f373fc8 = $(`<div id="html_ada84f41d1ee16318cd1525a1f373fc8" style="width: 100.0%; height: 100.0%;">Station : Place Nelson Mandela<br>Vélos disponibles : 2</div>`)[0];
+                popup_2feec7387c46db4cbfbe32efa9516a49.setContent(html_ada84f41d1ee16318cd1525a1f373fc8);
+            
+        
+
+        marker_02128b4b057f4c09f6dd79ec5c7f8812.bindPopup(popup_2feec7387c46db4cbfbe32efa9516a49)
+        ;
+
+        
+    
+    
+                marker_02128b4b057f4c09f6dd79ec5c7f8812.setIcon(icon_07b2c96e86e4b998a02014f40e21e71d);
+            
+    
+            var marker_0e38265e3e44a405fb78a5b917fb4fcc = L.marker(
+                [48.779751, 2.460837],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_83f09d427accdefcce626cdc2d79d36c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01611dd1d82b7a02aeb52be5a3bf836f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7d3bbb32e2ae2271f94f6e4a15d6519 = $(`<div id="html_c7d3bbb32e2ae2271f94f6e4a15d6519" style="width: 100.0%; height: 100.0%;">Station : Bas du Mont-Mesly<br>Vélos disponibles : 23</div>`)[0];
+                popup_01611dd1d82b7a02aeb52be5a3bf836f.setContent(html_c7d3bbb32e2ae2271f94f6e4a15d6519);
+            
+        
+
+        marker_0e38265e3e44a405fb78a5b917fb4fcc.bindPopup(popup_01611dd1d82b7a02aeb52be5a3bf836f)
+        ;
+
+        
+    
+    
+                marker_0e38265e3e44a405fb78a5b917fb4fcc.setIcon(icon_83f09d427accdefcce626cdc2d79d36c);
+            
+    
+            var marker_f321c2f80eb1c5fe9f192c752e88e473 = L.marker(
+                [48.88287775178599, 2.287667370814871],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_ae31fca92058776e51143ac3e0d9af7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8678dad70d3860be3a195f0a786375e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63797af5fba32da563a58bf37bcc1996 = $(`<div id="html_63797af5fba32da563a58bf37bcc1996" style="width: 100.0%; height: 100.0%;">Station : Guersant - Gouvion-Saint-Cyr<br>Vélos disponibles : 15</div>`)[0];
+                popup_8678dad70d3860be3a195f0a786375e3.setContent(html_63797af5fba32da563a58bf37bcc1996);
+            
+        
+
+        marker_f321c2f80eb1c5fe9f192c752e88e473.bindPopup(popup_8678dad70d3860be3a195f0a786375e3)
+        ;
+
+        
+    
+    
+                marker_f321c2f80eb1c5fe9f192c752e88e473.setIcon(icon_ae31fca92058776e51143ac3e0d9af7f);
+            
+    
+            var marker_d9099a948a646fe223b44b88e6460255 = L.marker(
+                [48.8570414504784, 2.37289470306807],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_428346f604867e00f94a773df3fbe3ca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_435aeccf0a852fbdcdc12ff955c209fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8ae395bad14747ded257074ea50d4f36 = $(`<div id="html_8ae395bad14747ded257074ea50d4f36" style="width: 100.0%; height: 100.0%;">Station : Froment - Bréguet<br>Vélos disponibles : 35</div>`)[0];
+                popup_435aeccf0a852fbdcdc12ff955c209fd.setContent(html_8ae395bad14747ded257074ea50d4f36);
+            
+        
+
+        marker_d9099a948a646fe223b44b88e6460255.bindPopup(popup_435aeccf0a852fbdcdc12ff955c209fd)
+        ;
+
+        
+    
+    
+                marker_d9099a948a646fe223b44b88e6460255.setIcon(icon_428346f604867e00f94a773df3fbe3ca);
+            
+    
+            var marker_bd7d8c039c7543186ac90af3a4c95bc8 = L.marker(
+                [48.881973298352, 2.301132157445],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_f4c0feefff797ae56e5ae27b53741587 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d91a4ec2a7917be615a8b08da7dc94c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df2883313664ef64ec6a8e8225494cca = $(`<div id="html_df2883313664ef64ec6a8e8225494cca" style="width: 100.0%; height: 100.0%;">Station : Jouffroy d'Abbans - Wagram<br>Vélos disponibles : 8</div>`)[0];
+                popup_7d91a4ec2a7917be615a8b08da7dc94c.setContent(html_df2883313664ef64ec6a8e8225494cca);
+            
+        
+
+        marker_bd7d8c039c7543186ac90af3a4c95bc8.bindPopup(popup_7d91a4ec2a7917be615a8b08da7dc94c)
+        ;
+
+        
+    
+    
+                marker_bd7d8c039c7543186ac90af3a4c95bc8.setIcon(icon_f4c0feefff797ae56e5ae27b53741587);
+            
+    
+            var marker_ca388ac94c69a98768726e8d6363b576 = L.marker(
+                [48.840855311763, 2.3875549435616],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_db92044ed57c5da5d6155d0c01ff6a20 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c924b65f1060b1325a4e910d1dd263c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b264de49fea0b911e59c2c42b019a81 = $(`<div id="html_5b264de49fea0b911e59c2c42b019a81" style="width: 100.0%; height: 100.0%;">Station : Mairie du 12ème<br>Vélos disponibles : 12</div>`)[0];
+                popup_c924b65f1060b1325a4e910d1dd263c2.setContent(html_5b264de49fea0b911e59c2c42b019a81);
+            
+        
+
+        marker_ca388ac94c69a98768726e8d6363b576.bindPopup(popup_c924b65f1060b1325a4e910d1dd263c2)
+        ;
+
+        
+    
+    
+                marker_ca388ac94c69a98768726e8d6363b576.setIcon(icon_db92044ed57c5da5d6155d0c01ff6a20);
+            
+    
+            var marker_8abe21a460eb87cf9d210be53ff1348e = L.marker(
+                [48.856451985396, 2.3348518833518],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_b2c9ceec177b0d44c6bece7b5ac5951e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_82f0ff31483674c206246d0f5be4abf7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00d9543abd8e411145afbd2577aaad5a = $(`<div id="html_00d9543abd8e411145afbd2577aaad5a" style="width: 100.0%; height: 100.0%;">Station : Beaux-Arts - Bonaparte<br>Vélos disponibles : 14</div>`)[0];
+                popup_82f0ff31483674c206246d0f5be4abf7.setContent(html_00d9543abd8e411145afbd2577aaad5a);
+            
+        
+
+        marker_8abe21a460eb87cf9d210be53ff1348e.bindPopup(popup_82f0ff31483674c206246d0f5be4abf7)
+        ;
+
+        
+    
+    
+                marker_8abe21a460eb87cf9d210be53ff1348e.setIcon(icon_b2c9ceec177b0d44c6bece7b5ac5951e);
+            
+    
+            var marker_250ee96c16c223f6c5bff57b093700bd = L.marker(
+                [48.826103771275, 2.3004549373748],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_1fc2f75846fb5486018239742216e7e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_286fdec4ab84f7881fa3561c2d36d489 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff77d5ae829247f53f77820265e2165f = $(`<div id="html_ff77d5ae829247f53f77820265e2165f" style="width: 100.0%; height: 100.0%;">Station : Bracion - Périphérique<br>Vélos disponibles : 2</div>`)[0];
+                popup_286fdec4ab84f7881fa3561c2d36d489.setContent(html_ff77d5ae829247f53f77820265e2165f);
+            
+        
+
+        marker_250ee96c16c223f6c5bff57b093700bd.bindPopup(popup_286fdec4ab84f7881fa3561c2d36d489)
+        ;
+
+        
+    
+    
+                marker_250ee96c16c223f6c5bff57b093700bd.setIcon(icon_1fc2f75846fb5486018239742216e7e3);
+            
+    
+            var marker_ff3c0c0ac70693cf62bcd1452919f2fb = L.marker(
+                [48.835092787824, 2.3534681351338],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_37ea86d3e6537c1e5549597c1d5f0434 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_818586fca57c08c7938b23b999d40a78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c09516dc742117e0d0957f8f2515420f = $(`<div id="html_c09516dc742117e0d0957f8f2515420f" style="width: 100.0%; height: 100.0%;">Station : Le Brun - Gobelins<br>Vélos disponibles : 0</div>`)[0];
+                popup_818586fca57c08c7938b23b999d40a78.setContent(html_c09516dc742117e0d0957f8f2515420f);
+            
+        
+
+        marker_ff3c0c0ac70693cf62bcd1452919f2fb.bindPopup(popup_818586fca57c08c7938b23b999d40a78)
+        ;
+
+        
+    
+    
+                marker_ff3c0c0ac70693cf62bcd1452919f2fb.setIcon(icon_37ea86d3e6537c1e5549597c1d5f0434);
+            
+    
+            var marker_9cf18a20900fb5d775594503378fc383 = L.marker(
+                [48.86785, 2.446748],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_865b5459acd17c2c1cd6952d03919290 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_25f507e96792a5731c2ea71e2c971b75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f3bb2d8dae8454180cbaf1147ceccc6 = $(`<div id="html_8f3bb2d8dae8454180cbaf1147ceccc6" style="width: 100.0%; height: 100.0%;">Station : Romainville - Vaillant-Couturier<br>Vélos disponibles : 0</div>`)[0];
+                popup_25f507e96792a5731c2ea71e2c971b75.setContent(html_8f3bb2d8dae8454180cbaf1147ceccc6);
+            
+        
+
+        marker_9cf18a20900fb5d775594503378fc383.bindPopup(popup_25f507e96792a5731c2ea71e2c971b75)
+        ;
+
+        
+    
+    
+                marker_9cf18a20900fb5d775594503378fc383.setIcon(icon_865b5459acd17c2c1cd6952d03919290);
+            
+    
+            var marker_053d2858f6fc1cdbbb06252e4ffc4244 = L.marker(
+                [48.870828911558, 2.3459213599563],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_dbbaec1761249d75c2cad498427ba7b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b74fa2261df21a4df02edca2b8c41d59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_39b6f1d0c5e7a9bab3f412400cb3055c = $(`<div id="html_39b6f1d0c5e7a9bab3f412400cb3055c" style="width: 100.0%; height: 100.0%;">Station : Saint-Fiacre - Poissonière<br>Vélos disponibles : 22</div>`)[0];
+                popup_b74fa2261df21a4df02edca2b8c41d59.setContent(html_39b6f1d0c5e7a9bab3f412400cb3055c);
+            
+        
+
+        marker_053d2858f6fc1cdbbb06252e4ffc4244.bindPopup(popup_b74fa2261df21a4df02edca2b8c41d59)
+        ;
+
+        
+    
+    
+                marker_053d2858f6fc1cdbbb06252e4ffc4244.setIcon(icon_dbbaec1761249d75c2cad498427ba7b4);
+            
+    
+            var marker_0f41df001626d0601f46f4a79154bd67 = L.marker(
+                [48.879406604954, 2.3034455627202988],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_78d1ccd9be91285bc75c804ece73ebab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72461a16d173037b9a77dfcbe873b8ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1cd74742b31acdb66fef9022c7eee7ad = $(`<div id="html_1cd74742b31acdb66fef9022c7eee7ad" style="width: 100.0%; height: 100.0%;">Station : Chazelles - Courcelles<br>Vélos disponibles : 2</div>`)[0];
+                popup_72461a16d173037b9a77dfcbe873b8ed.setContent(html_1cd74742b31acdb66fef9022c7eee7ad);
+            
+        
+
+        marker_0f41df001626d0601f46f4a79154bd67.bindPopup(popup_72461a16d173037b9a77dfcbe873b8ed)
+        ;
+
+        
+    
+    
+                marker_0f41df001626d0601f46f4a79154bd67.setIcon(icon_78d1ccd9be91285bc75c804ece73ebab);
+            
+    
+            var marker_f0c58eebcf52b2bc2a6118dd1029de99 = L.marker(
+                [48.85772148887421, 2.2549109905958176],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_288a55cda2a6bffe8f49bfb48136e0b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cee4656f47dbb65d80f50a6c9bfbf94f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e14788730dd6c9a35d5c29752ea90e48 = $(`<div id="html_e14788730dd6c9a35d5c29752ea90e48" style="width: 100.0%; height: 100.0%;">Station : Saint-Cloud - Hippodrome<br>Vélos disponibles : 2</div>`)[0];
+                popup_cee4656f47dbb65d80f50a6c9bfbf94f.setContent(html_e14788730dd6c9a35d5c29752ea90e48);
+            
+        
+
+        marker_f0c58eebcf52b2bc2a6118dd1029de99.bindPopup(popup_cee4656f47dbb65d80f50a6c9bfbf94f)
+        ;
+
+        
+    
+    
+                marker_f0c58eebcf52b2bc2a6118dd1029de99.setIcon(icon_288a55cda2a6bffe8f49bfb48136e0b7);
+            
+    
+            var marker_15de3a0573c47ce9f02b48ebab4a94bc = L.marker(
+                [48.873935212408, 2.306425832212],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_fb311a3dd60cc2b71e1ebaad5430df3c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_713d739513d03d5af4c774396e058c88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6be39ba15305f879ef12e434104fa01 = $(`<div id="html_d6be39ba15305f879ef12e434104fa01" style="width: 100.0%; height: 100.0%;">Station : Artois - Berri<br>Vélos disponibles : 24</div>`)[0];
+                popup_713d739513d03d5af4c774396e058c88.setContent(html_d6be39ba15305f879ef12e434104fa01);
+            
+        
+
+        marker_15de3a0573c47ce9f02b48ebab4a94bc.bindPopup(popup_713d739513d03d5af4c774396e058c88)
+        ;
+
+        
+    
+    
+                marker_15de3a0573c47ce9f02b48ebab4a94bc.setIcon(icon_fb311a3dd60cc2b71e1ebaad5430df3c);
+            
+    
+            var marker_e95c9876b70e22a691440296d010eb5b = L.marker(
+                [48.882428, 2.314002],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_23f9d66a57c784809c98245f72760e34 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1f8fcc7d61dfca5942bfbc99cda2232 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6bde624b857dcbe4717f393172667e4f = $(`<div id="html_6bde624b857dcbe4717f393172667e4f" style="width: 100.0%; height: 100.0%;">Station : De Toqueville - Terrasse<br>Vélos disponibles : 6</div>`)[0];
+                popup_f1f8fcc7d61dfca5942bfbc99cda2232.setContent(html_6bde624b857dcbe4717f393172667e4f);
+            
+        
+
+        marker_e95c9876b70e22a691440296d010eb5b.bindPopup(popup_f1f8fcc7d61dfca5942bfbc99cda2232)
+        ;
+
+        
+    
+    
+                marker_e95c9876b70e22a691440296d010eb5b.setIcon(icon_23f9d66a57c784809c98245f72760e34);
+            
+    
+            var marker_12f33731c18fe188d2fba7aebb06482f = L.marker(
+                [48.79628807093802, 2.417212128639221],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_a4ed6bf2add08ad3ba0977d431eb113f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_06921c5a422eb15c098dd13655d9f12e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d1dc3bf06ce7433639cb8ee9c4e75c5 = $(`<div id="html_3d1dc3bf06ce7433639cb8ee9c4e75c5" style="width: 100.0%; height: 100.0%;">Station : Jules Guesde - Pont du Port à l'Anglais<br>Vélos disponibles : 25</div>`)[0];
+                popup_06921c5a422eb15c098dd13655d9f12e.setContent(html_3d1dc3bf06ce7433639cb8ee9c4e75c5);
+            
+        
+
+        marker_12f33731c18fe188d2fba7aebb06482f.bindPopup(popup_06921c5a422eb15c098dd13655d9f12e)
+        ;
+
+        
+    
+    
+                marker_12f33731c18fe188d2fba7aebb06482f.setIcon(icon_a4ed6bf2add08ad3ba0977d431eb113f);
+            
+    
+            var marker_a00a1747ee725e9e7332bae9130652c6 = L.marker(
+                [48.868834023334, 2.2986030816809],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_3904213eff0f263c6110828873de9908 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00b76c49096501cdc89338ddf280bfcc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9b42b9ed058ea3b6a23d31a0e0d06c1 = $(`<div id="html_e9b42b9ed058ea3b6a23d31a0e0d06c1" style="width: 100.0%; height: 100.0%;">Station : Marceau - Chaillot<br>Vélos disponibles : 15</div>`)[0];
+                popup_00b76c49096501cdc89338ddf280bfcc.setContent(html_e9b42b9ed058ea3b6a23d31a0e0d06c1);
+            
+        
+
+        marker_a00a1747ee725e9e7332bae9130652c6.bindPopup(popup_00b76c49096501cdc89338ddf280bfcc)
+        ;
+
+        
+    
+    
+                marker_a00a1747ee725e9e7332bae9130652c6.setIcon(icon_3904213eff0f263c6110828873de9908);
+            
+    
+            var marker_e7d298c2fa119a5f6369c9d305ce6b7e = L.marker(
+                [48.838683941628375, 2.3110422492027287],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_c0f123bc327e17fd4d21dd7cb261a896 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1f2cc579f1e6b50a36fd849bbfc388b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d617b008ed001f3cc5ac1e163540f226 = $(`<div id="html_d617b008ed001f3cc5ac1e163540f226" style="width: 100.0%; height: 100.0%;">Station : Vigée-Lebrun - Anselme Payen<br>Vélos disponibles : 0</div>`)[0];
+                popup_1f2cc579f1e6b50a36fd849bbfc388b1.setContent(html_d617b008ed001f3cc5ac1e163540f226);
+            
+        
+
+        marker_e7d298c2fa119a5f6369c9d305ce6b7e.bindPopup(popup_1f2cc579f1e6b50a36fd849bbfc388b1)
+        ;
+
+        
+    
+    
+                marker_e7d298c2fa119a5f6369c9d305ce6b7e.setIcon(icon_c0f123bc327e17fd4d21dd7cb261a896);
+            
+    
+            var marker_5eaf795d0460672005c5a55dd0a780d7 = L.marker(
+                [48.82557229464416, 2.3576171323657036],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_37ee7d71defaebad6fbd1c0b2ca37d56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_28642abea4ed58a9b9d4fa6eae20848d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29315703993671fe515d728858a6195f = $(`<div id="html_29315703993671fe515d728858a6195f" style="width: 100.0%; height: 100.0%;">Station : Italie - Tolbiac<br>Vélos disponibles : 1</div>`)[0];
+                popup_28642abea4ed58a9b9d4fa6eae20848d.setContent(html_29315703993671fe515d728858a6195f);
+            
+        
+
+        marker_5eaf795d0460672005c5a55dd0a780d7.bindPopup(popup_28642abea4ed58a9b9d4fa6eae20848d)
+        ;
+
+        
+    
+    
+                marker_5eaf795d0460672005c5a55dd0a780d7.setIcon(icon_37ee7d71defaebad6fbd1c0b2ca37d56);
+            
+    
+            var marker_a09e448b2669d4bd8870d3e342c9b921 = L.marker(
+                [48.86106902949534, 2.2730283066630363],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_a70c14183f0822039d981408c5ab621a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c639ad4f5ac2df8fe599b19326358f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84c927a9d20274ae8d17d726dca40a5a = $(`<div id="html_84c927a9d20274ae8d17d726dca40a5a" style="width: 100.0%; height: 100.0%;">Station : Octave Feuillet - Albéric Magnard<br>Vélos disponibles : 12</div>`)[0];
+                popup_6c639ad4f5ac2df8fe599b19326358f7.setContent(html_84c927a9d20274ae8d17d726dca40a5a);
+            
+        
+
+        marker_a09e448b2669d4bd8870d3e342c9b921.bindPopup(popup_6c639ad4f5ac2df8fe599b19326358f7)
+        ;
+
+        
+    
+    
+                marker_a09e448b2669d4bd8870d3e342c9b921.setIcon(icon_a70c14183f0822039d981408c5ab621a);
+            
+    
+            var marker_b719802767fa2dfac06f3124f59706ab = L.marker(
+                [48.778192750803, 2.3963020229163],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_b8b7888a8de9cc0d95f5341974ae4266 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3cabcae8fa929c6dbda52b71af27d3c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31ea41ace599610a044988dfc54e5182 = $(`<div id="html_31ea41ace599610a044988dfc54e5182" style="width: 100.0%; height: 100.0%;">Station : Rouget de L'isle - Watteau<br>Vélos disponibles : 9</div>`)[0];
+                popup_3cabcae8fa929c6dbda52b71af27d3c0.setContent(html_31ea41ace599610a044988dfc54e5182);
+            
+        
+
+        marker_b719802767fa2dfac06f3124f59706ab.bindPopup(popup_3cabcae8fa929c6dbda52b71af27d3c0)
+        ;
+
+        
+    
+    
+                marker_b719802767fa2dfac06f3124f59706ab.setIcon(icon_b8b7888a8de9cc0d95f5341974ae4266);
+            
+    
+            var marker_8e83bee6321baff23b18f19b01f0565f = L.marker(
+                [48.8468428626593, 2.452062070369721],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_5313bbbb331bd0068506e03adb0f605a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9679bed1b8a20d6fd3cb3ab6b9f2e3f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_772d58f0ee866023eafe831a10a5b016 = $(`<div id="html_772d58f0ee866023eafe831a10a5b016" style="width: 100.0%; height: 100.0%;">Station : Place Jean-Spire-Lemaître<br>Vélos disponibles : 0</div>`)[0];
+                popup_9679bed1b8a20d6fd3cb3ab6b9f2e3f9.setContent(html_772d58f0ee866023eafe831a10a5b016);
+            
+        
+
+        marker_8e83bee6321baff23b18f19b01f0565f.bindPopup(popup_9679bed1b8a20d6fd3cb3ab6b9f2e3f9)
+        ;
+
+        
+    
+    
+                marker_8e83bee6321baff23b18f19b01f0565f.setIcon(icon_5313bbbb331bd0068506e03adb0f605a);
+            
+    
+            var marker_d24830a8a38b54630fbdcabdc9202ec8 = L.marker(
+                [48.87759897050706, 2.348463758826256],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_46691efa327e3218287d64dadc36e4af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a095279cc64f654fc65504b022e4927 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a9b3f0244efaf54f5770abf62735761 = $(`<div id="html_1a9b3f0244efaf54f5770abf62735761" style="width: 100.0%; height: 100.0%;">Station : Bellefond - Poissonnière<br>Vélos disponibles : 4</div>`)[0];
+                popup_7a095279cc64f654fc65504b022e4927.setContent(html_1a9b3f0244efaf54f5770abf62735761);
+            
+        
+
+        marker_d24830a8a38b54630fbdcabdc9202ec8.bindPopup(popup_7a095279cc64f654fc65504b022e4927)
+        ;
+
+        
+    
+    
+                marker_d24830a8a38b54630fbdcabdc9202ec8.setIcon(icon_46691efa327e3218287d64dadc36e4af);
+            
+    
+            var marker_4107fcaaffddfea16b96d8042de7884f = L.marker(
+                [48.88655580065981, 2.288640439510346],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_e142c9cdfdf80bf7e94dc3a8427730b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c6bec209d0cd659b45f6013f212d03f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_575160310f39686b77a16452374bbf32 = $(`<div id="html_575160310f39686b77a16452374bbf32" style="width: 100.0%; height: 100.0%;">Station : Jean Oestreicher - Porte de Champerret<br>Vélos disponibles : 16</div>`)[0];
+                popup_c6bec209d0cd659b45f6013f212d03f1.setContent(html_575160310f39686b77a16452374bbf32);
+            
+        
+
+        marker_4107fcaaffddfea16b96d8042de7884f.bindPopup(popup_c6bec209d0cd659b45f6013f212d03f1)
+        ;
+
+        
+    
+    
+                marker_4107fcaaffddfea16b96d8042de7884f.setIcon(icon_e142c9cdfdf80bf7e94dc3a8427730b5);
+            
+    
+            var marker_541f1712ad3d9bf13adfa3f9d2e496b7 = L.marker(
+                [48.83842553348809, 2.493693307042122],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_dc6d883bb860d48b82187c63a15963d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cfc50abfbc91cb7b6540972dad47b3bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c7ba9c8b2569957b976d86ae15e9d95 = $(`<div id="html_6c7ba9c8b2569957b976d86ae15e9d95" style="width: 100.0%; height: 100.0%;">Station : Gare de Nogent-le-Perreux<br>Vélos disponibles : 27</div>`)[0];
+                popup_cfc50abfbc91cb7b6540972dad47b3bf.setContent(html_6c7ba9c8b2569957b976d86ae15e9d95);
+            
+        
+
+        marker_541f1712ad3d9bf13adfa3f9d2e496b7.bindPopup(popup_cfc50abfbc91cb7b6540972dad47b3bf)
+        ;
+
+        
+    
+    
+                marker_541f1712ad3d9bf13adfa3f9d2e496b7.setIcon(icon_dc6d883bb860d48b82187c63a15963d7);
+            
+    
+            var marker_666ec000841a258ebca73022d7374e4f = L.marker(
+                [48.8351212784276, 2.385534569621086],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_142c0e0ea984eec2b4aa5ea6c0e25244 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f6a663f1e66d455e97d332a74deaa3d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa24db7182e127254c7cd6ec402ca05f = $(`<div id="html_fa24db7182e127254c7cd6ec402ca05f" style="width: 100.0%; height: 100.0%;">Station : Gabriel Lamé<br>Vélos disponibles : 35</div>`)[0];
+                popup_8f6a663f1e66d455e97d332a74deaa3d.setContent(html_fa24db7182e127254c7cd6ec402ca05f);
+            
+        
+
+        marker_666ec000841a258ebca73022d7374e4f.bindPopup(popup_8f6a663f1e66d455e97d332a74deaa3d)
+        ;
+
+        
+    
+    
+                marker_666ec000841a258ebca73022d7374e4f.setIcon(icon_142c0e0ea984eec2b4aa5ea6c0e25244);
+            
+    
+            var marker_f61444ee99ba6c8ebe3251734d2561fa = L.marker(
+                [48.857058739111, 2.3417982839439],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_7163c068335f9fa383902d65378132ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f3b52747e3d7754d5e2ef7e81e1a878 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d2ef44b99b372358af538adae5602a9 = $(`<div id="html_8d2ef44b99b372358af538adae5602a9" style="width: 100.0%; height: 100.0%;">Station : Quai de l'Horloge - Pont Neuf<br>Vélos disponibles : 11</div>`)[0];
+                popup_7f3b52747e3d7754d5e2ef7e81e1a878.setContent(html_8d2ef44b99b372358af538adae5602a9);
+            
+        
+
+        marker_f61444ee99ba6c8ebe3251734d2561fa.bindPopup(popup_7f3b52747e3d7754d5e2ef7e81e1a878)
+        ;
+
+        
+    
+    
+                marker_f61444ee99ba6c8ebe3251734d2561fa.setIcon(icon_7163c068335f9fa383902d65378132ba);
+            
+    
+            var marker_32529e7c5b88994228aa0487f37916c2 = L.marker(
+                [48.8462904, 2.3521495],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_e268e9f1d30ef3d5d73bd2e9e91a8972 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3256cad7b8d417a8cffc1a11d57af0da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b56b1ae9c1cf6af0e816eb8286542efb = $(`<div id="html_b56b1ae9c1cf6af0e816eb8286542efb" style="width: 100.0%; height: 100.0%;">Station : Boulangers - Cardinal Lemoine<br>Vélos disponibles : 18</div>`)[0];
+                popup_3256cad7b8d417a8cffc1a11d57af0da.setContent(html_b56b1ae9c1cf6af0e816eb8286542efb);
+            
+        
+
+        marker_32529e7c5b88994228aa0487f37916c2.bindPopup(popup_3256cad7b8d417a8cffc1a11d57af0da)
+        ;
+
+        
+    
+    
+                marker_32529e7c5b88994228aa0487f37916c2.setIcon(icon_e268e9f1d30ef3d5d73bd2e9e91a8972);
+            
+    
+            var marker_bb408a399f0a6e84767a57c0dcdef84e = L.marker(
+                [48.816376985087, 2.2670380088932],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_99c1e593b42d398b6b71decd72b46025 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f4689c20345531e66a31382d70152c04 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd8b5a19a275ef6c3a2055571c3017d8 = $(`<div id="html_bd8b5a19a275ef6c3a2055571c3017d8" style="width: 100.0%; height: 100.0%;">Station : Verger - Colonel Guichard<br>Vélos disponibles : 1</div>`)[0];
+                popup_f4689c20345531e66a31382d70152c04.setContent(html_bd8b5a19a275ef6c3a2055571c3017d8);
+            
+        
+
+        marker_bb408a399f0a6e84767a57c0dcdef84e.bindPopup(popup_f4689c20345531e66a31382d70152c04)
+        ;
+
+        
+    
+    
+                marker_bb408a399f0a6e84767a57c0dcdef84e.setIcon(icon_99c1e593b42d398b6b71decd72b46025);
+            
+    
+            var marker_3bce2dc55147192c9511cad634b4b044 = L.marker(
+                [48.84369030864, 2.3657163977623],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_c96ad9e6f85ad26e00853107228dd1c2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a48fcb6cd1cad99a3c1c154ddaef0699 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_540345aa9dc9d334208b488fece84621 = $(`<div id="html_540345aa9dc9d334208b488fece84621" style="width: 100.0%; height: 100.0%;">Station : Gare d'Austerlitz - Quai Saint-Bernard<br>Vélos disponibles : 25</div>`)[0];
+                popup_a48fcb6cd1cad99a3c1c154ddaef0699.setContent(html_540345aa9dc9d334208b488fece84621);
+            
+        
+
+        marker_3bce2dc55147192c9511cad634b4b044.bindPopup(popup_a48fcb6cd1cad99a3c1c154ddaef0699)
+        ;
+
+        
+    
+    
+                marker_3bce2dc55147192c9511cad634b4b044.setIcon(icon_c96ad9e6f85ad26e00853107228dd1c2);
+            
+    
+            var marker_c99774977217beaa9df72a127cf8c90a = L.marker(
+                [48.874777677621296, 2.326515804784655],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_f21bc8a4a1d46ea04ac5e96ce51337db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46682444b5346071cf2256b30c59ec89 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_197882f3b92ae212cbb9cd3d0a18b563 = $(`<div id="html_197882f3b92ae212cbb9cd3d0a18b563" style="width: 100.0%; height: 100.0%;">Station : Gare Saint-Lazare - Isly<br>Vélos disponibles : 22</div>`)[0];
+                popup_46682444b5346071cf2256b30c59ec89.setContent(html_197882f3b92ae212cbb9cd3d0a18b563);
+            
+        
+
+        marker_c99774977217beaa9df72a127cf8c90a.bindPopup(popup_46682444b5346071cf2256b30c59ec89)
+        ;
+
+        
+    
+    
+                marker_c99774977217beaa9df72a127cf8c90a.setIcon(icon_f21bc8a4a1d46ea04ac5e96ce51337db);
+            
+    
+            var marker_b4d865a5f141dbdb0ed565e4a32aed15 = L.marker(
+                [48.88115023337061, 2.480436824262142],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_41e0c6630f59ad86f3355f7ec352ff47 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_989cd905690567ca9c0408a7824ee516 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c26f70b35ecf5be856eb8bd0572eec2 = $(`<div id="html_3c26f70b35ecf5be856eb8bd0572eec2" style="width: 100.0%; height: 100.0%;">Station : Gare Rosny-Bois-Perrier<br>Vélos disponibles : 17</div>`)[0];
+                popup_989cd905690567ca9c0408a7824ee516.setContent(html_3c26f70b35ecf5be856eb8bd0572eec2);
+            
+        
+
+        marker_b4d865a5f141dbdb0ed565e4a32aed15.bindPopup(popup_989cd905690567ca9c0408a7824ee516)
+        ;
+
+        
+    
+    
+                marker_b4d865a5f141dbdb0ed565e4a32aed15.setIcon(icon_41e0c6630f59ad86f3355f7ec352ff47);
+            
+    
+            var marker_32bda86492eeb0e49cc42e76af23c12d = L.marker(
+                [48.883207841228, 2.3308449949029],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_70a7d5016e8f560a59b9e66c1a0b54ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_507d956f5cb021f68f75769218d714d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2fb4b6c9d9b0315027edd118150142f = $(`<div id="html_b2fb4b6c9d9b0315027edd118150142f" style="width: 100.0%; height: 100.0%;">Station : Douai - Bruxelles<br>Vélos disponibles : 4</div>`)[0];
+                popup_507d956f5cb021f68f75769218d714d4.setContent(html_b2fb4b6c9d9b0315027edd118150142f);
+            
+        
+
+        marker_32bda86492eeb0e49cc42e76af23c12d.bindPopup(popup_507d956f5cb021f68f75769218d714d4)
+        ;
+
+        
+    
+    
+                marker_32bda86492eeb0e49cc42e76af23c12d.setIcon(icon_70a7d5016e8f560a59b9e66c1a0b54ee);
+            
+    
+            var marker_51e13d78c2b19ba97b302e6ed84cbbad = L.marker(
+                [48.862923800596, 2.4155035614967],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_859693816fda962a289521e34df5a8d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_83356e1182f4539aa2f7c62510afe11b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e28603a321b28ff5158f016904528fad = $(`<div id="html_e28603a321b28ff5158f016904528fad" style="width: 100.0%; height: 100.0%;">Station : Château - République<br>Vélos disponibles : 1</div>`)[0];
+                popup_83356e1182f4539aa2f7c62510afe11b.setContent(html_e28603a321b28ff5158f016904528fad);
+            
+        
+
+        marker_51e13d78c2b19ba97b302e6ed84cbbad.bindPopup(popup_83356e1182f4539aa2f7c62510afe11b)
+        ;
+
+        
+    
+    
+                marker_51e13d78c2b19ba97b302e6ed84cbbad.setIcon(icon_859693816fda962a289521e34df5a8d3);
+            
+    
+            var marker_37155f79cbae60917fc95bcbebdd4b37 = L.marker(
+                [48.869689856852, 2.3107324540615],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_8cc1b049f78e7492acfe22a5ab57fe97 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f184190e059a13a16362290d24cb409e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_766d4a2bc439c7825ff0e76243d0e3fd = $(`<div id="html_766d4a2bc439c7825ff0e76243d0e3fd" style="width: 100.0%; height: 100.0%;">Station : Jean Mermoz - Champs-Elysées<br>Vélos disponibles : 37</div>`)[0];
+                popup_f184190e059a13a16362290d24cb409e.setContent(html_766d4a2bc439c7825ff0e76243d0e3fd);
+            
+        
+
+        marker_37155f79cbae60917fc95bcbebdd4b37.bindPopup(popup_f184190e059a13a16362290d24cb409e)
+        ;
+
+        
+    
+    
+                marker_37155f79cbae60917fc95bcbebdd4b37.setIcon(icon_8cc1b049f78e7492acfe22a5ab57fe97);
+            
+    
+            var marker_af2805a4bfa82027cf0f5ad9a44eedbd = L.marker(
+                [48.87334627510507, 2.337980867701675],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_af2ac8557e52643d532349e553774613 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84cafd5f2d2acf004dd8ae07d8b6965e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_328f9e065349cf60dac89553191bb627 = $(`<div id="html_328f9e065349cf60dac89553191bb627" style="width: 100.0%; height: 100.0%;">Station : Rossini - Laffitte<br>Vélos disponibles : 28</div>`)[0];
+                popup_84cafd5f2d2acf004dd8ae07d8b6965e.setContent(html_328f9e065349cf60dac89553191bb627);
+            
+        
+
+        marker_af2805a4bfa82027cf0f5ad9a44eedbd.bindPopup(popup_84cafd5f2d2acf004dd8ae07d8b6965e)
+        ;
+
+        
+    
+    
+                marker_af2805a4bfa82027cf0f5ad9a44eedbd.setIcon(icon_af2ac8557e52643d532349e553774613);
+            
+    
+            var marker_dce1b06804e34435b155f47d92568a32 = L.marker(
+                [48.918648659556, 2.281411215663],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_327a3d0e1305918cab36b146e0a2c52d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_40126a30f8b268d5bc1546f3c9a02150 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26cba17a495da11485e7b1a0178b6c62 = $(`<div id="html_26cba17a495da11485e7b1a0178b6c62" style="width: 100.0%; height: 100.0%;">Station : Argenteuil - Voltaire<br>Vélos disponibles : 2</div>`)[0];
+                popup_40126a30f8b268d5bc1546f3c9a02150.setContent(html_26cba17a495da11485e7b1a0178b6c62);
+            
+        
+
+        marker_dce1b06804e34435b155f47d92568a32.bindPopup(popup_40126a30f8b268d5bc1546f3c9a02150)
+        ;
+
+        
+    
+    
+                marker_dce1b06804e34435b155f47d92568a32.setIcon(icon_327a3d0e1305918cab36b146e0a2c52d);
+            
+    
+            var marker_2fd652681f317c5fe6bb8763c90ac023 = L.marker(
+                [48.89577046284005, 2.223908342421055],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_9da6900f5c1cfe68a25c0493c7ce9509 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e0360a0dbdd08b3f212b254e3d4415f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c98787d28a92f28efcb9e4121875ca8a = $(`<div id="html_c98787d28a92f28efcb9e4121875ca8a" style="width: 100.0%; height: 100.0%;">Station : Pesaro - Préfecture<br>Vélos disponibles : 10</div>`)[0];
+                popup_e0360a0dbdd08b3f212b254e3d4415f9.setContent(html_c98787d28a92f28efcb9e4121875ca8a);
+            
+        
+
+        marker_2fd652681f317c5fe6bb8763c90ac023.bindPopup(popup_e0360a0dbdd08b3f212b254e3d4415f9)
+        ;
+
+        
+    
+    
+                marker_2fd652681f317c5fe6bb8763c90ac023.setIcon(icon_9da6900f5c1cfe68a25c0493c7ce9509);
+            
+    
+            var marker_58b1151f4003233758695b5f3970d9d9 = L.marker(
+                [48.8554439, 2.2704418],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_922007581edae17db4b63e3193312e69 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_02804b49699dd2b5c19c1596304961d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_358e19c0c1da0eca655620015661de83 = $(`<div id="html_358e19c0c1da0eca655620015661de83" style="width: 100.0%; height: 100.0%;">Station : Ranelagh - Mozart<br>Vélos disponibles : 2</div>`)[0];
+                popup_02804b49699dd2b5c19c1596304961d5.setContent(html_358e19c0c1da0eca655620015661de83);
+            
+        
+
+        marker_58b1151f4003233758695b5f3970d9d9.bindPopup(popup_02804b49699dd2b5c19c1596304961d5)
+        ;
+
+        
+    
+    
+                marker_58b1151f4003233758695b5f3970d9d9.setIcon(icon_922007581edae17db4b63e3193312e69);
+            
+    
+            var marker_c9161262e3cb6a710ce88e4742c3e690 = L.marker(
+                [48.88006587474148, 2.3310810327529907],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_3d7c35084c58cd5086c35dc7831cce43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_055aa790dcd94af65fbcd644d995e05b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_798068ba768d01e9969780b0d44e6054 = $(`<div id="html_798068ba768d01e9969780b0d44e6054" style="width: 100.0%; height: 100.0%;">Station : Moncey - Blanche<br>Vélos disponibles : 3</div>`)[0];
+                popup_055aa790dcd94af65fbcd644d995e05b.setContent(html_798068ba768d01e9969780b0d44e6054);
+            
+        
+
+        marker_c9161262e3cb6a710ce88e4742c3e690.bindPopup(popup_055aa790dcd94af65fbcd644d995e05b)
+        ;
+
+        
+    
+    
+                marker_c9161262e3cb6a710ce88e4742c3e690.setIcon(icon_3d7c35084c58cd5086c35dc7831cce43);
+            
+    
+            var marker_3950774660e0c70a5c5f5e660988bfe8 = L.marker(
+                [48.881949, 2.352339],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_fdee70b2d185a0d6bdb7fec9c78243b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_06671444a0bb00a8c38a4999077a8bb8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d464308bb7f87e8fa68c6d2a938acf3a = $(`<div id="html_d464308bb7f87e8fa68c6d2a938acf3a" style="width: 100.0%; height: 100.0%;">Station : Gare du Nord - Hôpital Lariboisière<br>Vélos disponibles : 0</div>`)[0];
+                popup_06671444a0bb00a8c38a4999077a8bb8.setContent(html_d464308bb7f87e8fa68c6d2a938acf3a);
+            
+        
+
+        marker_3950774660e0c70a5c5f5e660988bfe8.bindPopup(popup_06671444a0bb00a8c38a4999077a8bb8)
+        ;
+
+        
+    
+    
+                marker_3950774660e0c70a5c5f5e660988bfe8.setIcon(icon_fdee70b2d185a0d6bdb7fec9c78243b6);
+            
+    
+            var marker_9d929b3faf9a7993497b653804becf33 = L.marker(
+                [48.88022154052015, 2.2854680567979813],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_7809f0550bbea210763099c6c34a9225 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_004f1cc67a4f9dabf9ed302cbae700a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5f8fa96fa7a0b33ba4d8a303be85b23 = $(`<div id="html_e5f8fa96fa7a0b33ba4d8a303be85b23" style="width: 100.0%; height: 100.0%;">Station : Belidor - Gouvion-Saint-Cyr<br>Vélos disponibles : 6</div>`)[0];
+                popup_004f1cc67a4f9dabf9ed302cbae700a4.setContent(html_e5f8fa96fa7a0b33ba4d8a303be85b23);
+            
+        
+
+        marker_9d929b3faf9a7993497b653804becf33.bindPopup(popup_004f1cc67a4f9dabf9ed302cbae700a4)
+        ;
+
+        
+    
+    
+                marker_9d929b3faf9a7993497b653804becf33.setIcon(icon_7809f0550bbea210763099c6c34a9225);
+            
+    
+            var marker_e396b017226419b95b2564051c744aeb = L.marker(
+                [48.88192765861766, 2.392586767673493],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_1a8473aefa100013114393de05c7e174 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_613c10da280e1c46f80c74e2e694a5fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_49dd70fef6d4b83fd283b58c0e051349 = $(`<div id="html_49dd70fef6d4b83fd283b58c0e051349" style="width: 100.0%; height: 100.0%;">Station : Place de Rhin et Danube<br>Vélos disponibles : 2</div>`)[0];
+                popup_613c10da280e1c46f80c74e2e694a5fa.setContent(html_49dd70fef6d4b83fd283b58c0e051349);
+            
+        
+
+        marker_e396b017226419b95b2564051c744aeb.bindPopup(popup_613c10da280e1c46f80c74e2e694a5fa)
+        ;
+
+        
+    
+    
+                marker_e396b017226419b95b2564051c744aeb.setIcon(icon_1a8473aefa100013114393de05c7e174);
+            
+    
+            var marker_ef7900dffe0b19dcb942a9e55571f28d = L.marker(
+                [48.80889533774377, 2.5382421165704727],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_02310f844d959029c3cb9c92e1fe2ad7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_508fc0266e91e2c98a5e3a9adce1f6cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3047812512e42653c9df70b74014abaa = $(`<div id="html_3047812512e42653c9df70b74014abaa" style="width: 100.0%; height: 100.0%;">Station : 11 Novembre 1918 - 8 Mai 1945<br>Vélos disponibles : 11</div>`)[0];
+                popup_508fc0266e91e2c98a5e3a9adce1f6cc.setContent(html_3047812512e42653c9df70b74014abaa);
+            
+        
+
+        marker_ef7900dffe0b19dcb942a9e55571f28d.bindPopup(popup_508fc0266e91e2c98a5e3a9adce1f6cc)
+        ;
+
+        
+    
+    
+                marker_ef7900dffe0b19dcb942a9e55571f28d.setIcon(icon_02310f844d959029c3cb9c92e1fe2ad7);
+            
+    
+            var marker_5b5eb36a2b91f0db0b2506317b23d601 = L.marker(
+                [48.861142162761, 2.3677996181077],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_02de99583e680e63a47e05ba6ebd6f6e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_263ba6dbf63c25fee26144611761c3d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f8989193ca3bf547a924f06bc913442c = $(`<div id="html_f8989193ca3bf547a924f06bc913442c" style="width: 100.0%; height: 100.0%;">Station : Amelot - Saint-Sébastien<br>Vélos disponibles : 21</div>`)[0];
+                popup_263ba6dbf63c25fee26144611761c3d0.setContent(html_f8989193ca3bf547a924f06bc913442c);
+            
+        
+
+        marker_5b5eb36a2b91f0db0b2506317b23d601.bindPopup(popup_263ba6dbf63c25fee26144611761c3d0)
+        ;
+
+        
+    
+    
+                marker_5b5eb36a2b91f0db0b2506317b23d601.setIcon(icon_02de99583e680e63a47e05ba6ebd6f6e);
+            
+    
+            var marker_26184941f3f72c28d2f0c06a4ebcb471 = L.marker(
+                [48.893923963057865, 2.39790290594101],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_592588e540b6fdb9c69544168d5a73e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7795341fed99e0f3a232eec2f3e7bbba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16e352025d0d0e8fbcd9b05c8c75368f = $(`<div id="html_16e352025d0d0e8fbcd9b05c8c75368f" style="width: 100.0%; height: 100.0%;">Station : Delphine Seyrig - Général Leclerc<br>Vélos disponibles : 13</div>`)[0];
+                popup_7795341fed99e0f3a232eec2f3e7bbba.setContent(html_16e352025d0d0e8fbcd9b05c8c75368f);
+            
+        
+
+        marker_26184941f3f72c28d2f0c06a4ebcb471.bindPopup(popup_7795341fed99e0f3a232eec2f3e7bbba)
+        ;
+
+        
+    
+    
+                marker_26184941f3f72c28d2f0c06a4ebcb471.setIcon(icon_592588e540b6fdb9c69544168d5a73e7);
+            
+    
+            var marker_ae5aaa249f1f6ee0788c1464149f7230 = L.marker(
+                [48.847020571652, 2.3464982619671],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_016e356d0e7d97e5142c1b21789733c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_56b14d51ea682d926e8798764573f866 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_877bedd91f7a1ac0cd3f4b8667953d55 = $(`<div id="html_877bedd91f7a1ac0cd3f4b8667953d55" style="width: 100.0%; height: 100.0%;">Station : Panthéon - Valette<br>Vélos disponibles : 47</div>`)[0];
+                popup_56b14d51ea682d926e8798764573f866.setContent(html_877bedd91f7a1ac0cd3f4b8667953d55);
+            
+        
+
+        marker_ae5aaa249f1f6ee0788c1464149f7230.bindPopup(popup_56b14d51ea682d926e8798764573f866)
+        ;
+
+        
+    
+    
+                marker_ae5aaa249f1f6ee0788c1464149f7230.setIcon(icon_016e356d0e7d97e5142c1b21789733c8);
+            
+    
+            var marker_739c58202496c13602e6f180a0b3967b = L.marker(
+                [48.870948218595, 2.3612049221992],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_554d948efab8a8b0924d3194256a1aa3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a211a2bf7c7f76ed2f884333270959e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_01cd6b02b4d5b13916371ee11052703e = $(`<div id="html_01cd6b02b4d5b13916371ee11052703e" style="width: 100.0%; height: 100.0%;">Station : Place Jacques Bonsergent<br>Vélos disponibles : 30</div>`)[0];
+                popup_4a211a2bf7c7f76ed2f884333270959e.setContent(html_01cd6b02b4d5b13916371ee11052703e);
+            
+        
+
+        marker_739c58202496c13602e6f180a0b3967b.bindPopup(popup_4a211a2bf7c7f76ed2f884333270959e)
+        ;
+
+        
+    
+    
+                marker_739c58202496c13602e6f180a0b3967b.setIcon(icon_554d948efab8a8b0924d3194256a1aa3);
+            
+    
+            var marker_f6c6cd0217efee3b6b916597919aaf08 = L.marker(
+                [48.84479928858768, 2.329337755887181],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_cb76ea1bf1b30c85b65001a9db2ab7cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_432c8d56fb18cb716862386f5ed0fb42 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ddd0261c2b24404c7d673252995eb6a = $(`<div id="html_0ddd0261c2b24404c7d673252995eb6a" style="width: 100.0%; height: 100.0%;">Station : Notre-Dame-des-Champs - Stanislas<br>Vélos disponibles : 8</div>`)[0];
+                popup_432c8d56fb18cb716862386f5ed0fb42.setContent(html_0ddd0261c2b24404c7d673252995eb6a);
+            
+        
+
+        marker_f6c6cd0217efee3b6b916597919aaf08.bindPopup(popup_432c8d56fb18cb716862386f5ed0fb42)
+        ;
+
+        
+    
+    
+                marker_f6c6cd0217efee3b6b916597919aaf08.setIcon(icon_cb76ea1bf1b30c85b65001a9db2ab7cc);
+            
+    
+            var marker_0ac731c01197c844c579fa617631cd79 = L.marker(
+                [48.862147844548, 2.3772348091006],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_578267cc5481aaa328f62e790449f2de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38df054d14df1ac076ca455d6639ab13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_355c20a92aeb5309b1e2a2815167a717 = $(`<div id="html_355c20a92aeb5309b1e2a2815167a717" style="width: 100.0%; height: 100.0%;">Station : Saint-Ambroise - Parmentier<br>Vélos disponibles : 7</div>`)[0];
+                popup_38df054d14df1ac076ca455d6639ab13.setContent(html_355c20a92aeb5309b1e2a2815167a717);
+            
+        
+
+        marker_0ac731c01197c844c579fa617631cd79.bindPopup(popup_38df054d14df1ac076ca455d6639ab13)
+        ;
+
+        
+    
+    
+                marker_0ac731c01197c844c579fa617631cd79.setIcon(icon_578267cc5481aaa328f62e790449f2de);
+            
+    
+            var marker_4eacefdd4f61be74bbc203a52ac6b05e = L.marker(
+                [48.82237977153955, 2.4586871266365056],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_d995eaae85d0b2004634f24ebd05c185 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4636f1f05d90e9d189fb52204048dfe7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a99dd2fdc7ef587d1ca63c7ed20a6f3 = $(`<div id="html_3a99dd2fdc7ef587d1ca63c7ed20a6f3" style="width: 100.0%; height: 100.0%;">Station : Pyramide - Ecole du Breuil<br>Vélos disponibles : 22</div>`)[0];
+                popup_4636f1f05d90e9d189fb52204048dfe7.setContent(html_3a99dd2fdc7ef587d1ca63c7ed20a6f3);
+            
+        
+
+        marker_4eacefdd4f61be74bbc203a52ac6b05e.bindPopup(popup_4636f1f05d90e9d189fb52204048dfe7)
+        ;
+
+        
+    
+    
+                marker_4eacefdd4f61be74bbc203a52ac6b05e.setIcon(icon_d995eaae85d0b2004634f24ebd05c185);
+            
+    
+            var marker_8bc4318efd182386c46924fee771f8d3 = L.marker(
+                [48.875034655883944, 2.359801238597928],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_56f75c44913bed09db832632b6ef70e0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_06396fd42b499a32719c62f281b6d074 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_705f3a114ec031ea2e681efc3b7dfae1 = $(`<div id="html_705f3a114ec031ea2e681efc3b7dfae1" style="width: 100.0%; height: 100.0%;">Station : Récollets - Square Villemin<br>Vélos disponibles : 0</div>`)[0];
+                popup_06396fd42b499a32719c62f281b6d074.setContent(html_705f3a114ec031ea2e681efc3b7dfae1);
+            
+        
+
+        marker_8bc4318efd182386c46924fee771f8d3.bindPopup(popup_06396fd42b499a32719c62f281b6d074)
+        ;
+
+        
+    
+    
+                marker_8bc4318efd182386c46924fee771f8d3.setIcon(icon_56f75c44913bed09db832632b6ef70e0);
+            
+    
+            var marker_24bda7c5feb2ac15b9c4f84e2bd1908d = L.marker(
+                [48.83372430280548, 2.2713854536414146],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_eb4cdce7dcdf44cfb579e9d60b3d1fa3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_07c558deeff619556f5a21dd77cb8b42 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb248d3a4a00803fc5350804a5e08be7 = $(`<div id="html_fb248d3a4a00803fc5350804a5e08be7" style="width: 100.0%; height: 100.0%;">Station : Henry Farman<br>Vélos disponibles : 16</div>`)[0];
+                popup_07c558deeff619556f5a21dd77cb8b42.setContent(html_fb248d3a4a00803fc5350804a5e08be7);
+            
+        
+
+        marker_24bda7c5feb2ac15b9c4f84e2bd1908d.bindPopup(popup_07c558deeff619556f5a21dd77cb8b42)
+        ;
+
+        
+    
+    
+                marker_24bda7c5feb2ac15b9c4f84e2bd1908d.setIcon(icon_eb4cdce7dcdf44cfb579e9d60b3d1fa3);
+            
+    
+            var marker_c6e2f0f5fc486f0ab51b4039e6456680 = L.marker(
+                [48.81217465201, 2.3035024699104],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_6c19245fc4e3c6387e8f09212a5b4ded = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_620843333d23ab673632be1dc471ba4f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7437f6918f448143ccc115697ed1a19b = $(`<div id="html_7437f6918f448143ccc115697ed1a19b" style="width: 100.0%; height: 100.0%;">Station : Marne - Germain Dardan<br>Vélos disponibles : 4</div>`)[0];
+                popup_620843333d23ab673632be1dc471ba4f.setContent(html_7437f6918f448143ccc115697ed1a19b);
+            
+        
+
+        marker_c6e2f0f5fc486f0ab51b4039e6456680.bindPopup(popup_620843333d23ab673632be1dc471ba4f)
+        ;
+
+        
+    
+    
+                marker_c6e2f0f5fc486f0ab51b4039e6456680.setIcon(icon_6c19245fc4e3c6387e8f09212a5b4ded);
+            
+    
+            var marker_de598347b4a9fd7c8fc8f5c040f1694f = L.marker(
+                [48.7985844, 2.3821302],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_adc337ad3f2ca3fadde1b94141c3d676 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5e445936750f9b799a9e892788bfd579 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9609daae2f9358b3868c01037df906fd = $(`<div id="html_9609daae2f9358b3868c01037df906fd" style="width: 100.0%; height: 100.0%;">Station : Concorde - Stalingrad<br>Vélos disponibles : 6</div>`)[0];
+                popup_5e445936750f9b799a9e892788bfd579.setContent(html_9609daae2f9358b3868c01037df906fd);
+            
+        
+
+        marker_de598347b4a9fd7c8fc8f5c040f1694f.bindPopup(popup_5e445936750f9b799a9e892788bfd579)
+        ;
+
+        
+    
+    
+                marker_de598347b4a9fd7c8fc8f5c040f1694f.setIcon(icon_adc337ad3f2ca3fadde1b94141c3d676);
+            
+    
+            var marker_a4d1b86cb0de97310426c5b7d9253057 = L.marker(
+                [48.87202880542, 2.3918598091484],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_e241e4cecf1ed5102276d4e956acf68a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7df78e8ad133367236ede51697125c2f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_099c8b96c5ea06644ac2897eca2a7984 = $(`<div id="html_099c8b96c5ea06644ac2897eca2a7984" style="width: 100.0%; height: 100.0%;">Station : Pyrénées - Emmery<br>Vélos disponibles : 0</div>`)[0];
+                popup_7df78e8ad133367236ede51697125c2f.setContent(html_099c8b96c5ea06644ac2897eca2a7984);
+            
+        
+
+        marker_a4d1b86cb0de97310426c5b7d9253057.bindPopup(popup_7df78e8ad133367236ede51697125c2f)
+        ;
+
+        
+    
+    
+                marker_a4d1b86cb0de97310426c5b7d9253057.setIcon(icon_e241e4cecf1ed5102276d4e956acf68a);
+            
+    
+            var marker_468072d2b9fd8a3fa0f48c6c6a142879 = L.marker(
+                [48.837695319163, 2.2753742337227],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_676e5050bc93ac7f2f12301cb84d5c6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0ce7189aee9498362fb1c44aadf2b25 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a4c5f61f12d41c9a67f75e1ed5cad05 = $(`<div id="html_3a4c5f61f12d41c9a67f75e1ed5cad05" style="width: 100.0%; height: 100.0%;">Station : Hôpital Européen Georges Pompidou<br>Vélos disponibles : 59</div>`)[0];
+                popup_c0ce7189aee9498362fb1c44aadf2b25.setContent(html_3a4c5f61f12d41c9a67f75e1ed5cad05);
+            
+        
+
+        marker_468072d2b9fd8a3fa0f48c6c6a142879.bindPopup(popup_c0ce7189aee9498362fb1c44aadf2b25)
+        ;
+
+        
+    
+    
+                marker_468072d2b9fd8a3fa0f48c6c6a142879.setIcon(icon_676e5050bc93ac7f2f12301cb84d5c6f);
+            
+    
+            var marker_a6de1ac86022e47387d8fca8e3d5a160 = L.marker(
+                [48.847803063647, 2.4451419711113],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_05245b0517fa94220597b72126002bca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4086dae89a6f918a093094a330308789 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c92142ea7d05f4376e6adf9002608ec8 = $(`<div id="html_c92142ea7d05f4376e6adf9002608ec8" style="width: 100.0%; height: 100.0%;">Station : Fontenay - Libération<br>Vélos disponibles : 0</div>`)[0];
+                popup_4086dae89a6f918a093094a330308789.setContent(html_c92142ea7d05f4376e6adf9002608ec8);
+            
+        
+
+        marker_a6de1ac86022e47387d8fca8e3d5a160.bindPopup(popup_4086dae89a6f918a093094a330308789)
+        ;
+
+        
+    
+    
+                marker_a6de1ac86022e47387d8fca8e3d5a160.setIcon(icon_05245b0517fa94220597b72126002bca);
+            
+    
+            var marker_6219efc4ced145689d897434062d0a4d = L.marker(
+                [48.848225572724, 2.3502873256803],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_aa332d8bdea10876804817643674e08b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b5986e8d86f1aef14769868613f7a72 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_878de72d1b1ad7532c85144f8eb49472 = $(`<div id="html_878de72d1b1ad7532c85144f8eb49472" style="width: 100.0%; height: 100.0%;">Station : Mutualité<br>Vélos disponibles : 31</div>`)[0];
+                popup_1b5986e8d86f1aef14769868613f7a72.setContent(html_878de72d1b1ad7532c85144f8eb49472);
+            
+        
+
+        marker_6219efc4ced145689d897434062d0a4d.bindPopup(popup_1b5986e8d86f1aef14769868613f7a72)
+        ;
+
+        
+    
+    
+                marker_6219efc4ced145689d897434062d0a4d.setIcon(icon_aa332d8bdea10876804817643674e08b);
+            
+    
+            var marker_f75d5b483bf3b2aea0ba2e31dfc0300b = L.marker(
+                [48.875089888322, 2.3826304078102],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_4677a0961f91dd7f76632cde22373fac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_648982b0305b823c4d8e8cf41ef08f69 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86fe5168afb1e40c24a1a5267236c336 = $(`<div id="html_86fe5168afb1e40c24a1a5267236c336" style="width: 100.0%; height: 100.0%;">Station : Square Simon Bolivar<br>Vélos disponibles : 2</div>`)[0];
+                popup_648982b0305b823c4d8e8cf41ef08f69.setContent(html_86fe5168afb1e40c24a1a5267236c336);
+            
+        
+
+        marker_f75d5b483bf3b2aea0ba2e31dfc0300b.bindPopup(popup_648982b0305b823c4d8e8cf41ef08f69)
+        ;
+
+        
+    
+    
+                marker_f75d5b483bf3b2aea0ba2e31dfc0300b.setIcon(icon_4677a0961f91dd7f76632cde22373fac);
+            
+    
+            var marker_e3ea310fe3fe2286f630b16428f84270 = L.marker(
+                [48.883647828876, 2.2952447086573],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_7d181535d69d6c3ac23ccc6f06a1405a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85b95041d6d8871084b98c7f525dc99c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f14ece96471e99b610b171a904180d0 = $(`<div id="html_5f14ece96471e99b610b171a904180d0" style="width: 100.0%; height: 100.0%;">Station : Pereire - Rennequin<br>Vélos disponibles : 2</div>`)[0];
+                popup_85b95041d6d8871084b98c7f525dc99c.setContent(html_5f14ece96471e99b610b171a904180d0);
+            
+        
+
+        marker_e3ea310fe3fe2286f630b16428f84270.bindPopup(popup_85b95041d6d8871084b98c7f525dc99c)
+        ;
+
+        
+    
+    
+                marker_e3ea310fe3fe2286f630b16428f84270.setIcon(icon_7d181535d69d6c3ac23ccc6f06a1405a);
+            
+    
+            var marker_8246138089dab89c302167b02c5de182 = L.marker(
+                [48.892594758409, 2.3171403311203],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_b1e59897d8ece7f36e64a77a0468e4ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_284388f5b073f3d256324dcb13c8dfe6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a37b23efa48053951662928a5297522f = $(`<div id="html_a37b23efa48053951662928a5297522f" style="width: 100.0%; height: 100.0%;">Station : Paul Bodin - Clichy<br>Vélos disponibles : 3</div>`)[0];
+                popup_284388f5b073f3d256324dcb13c8dfe6.setContent(html_a37b23efa48053951662928a5297522f);
+            
+        
+
+        marker_8246138089dab89c302167b02c5de182.bindPopup(popup_284388f5b073f3d256324dcb13c8dfe6)
+        ;
+
+        
+    
+    
+                marker_8246138089dab89c302167b02c5de182.setIcon(icon_b1e59897d8ece7f36e64a77a0468e4ef);
+            
+    
+            var marker_206b60f5dc5557a884a57564f5823610 = L.marker(
+                [48.828012849445, 2.3056878894567],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_a7837c54278507a31eb5888b10d33852 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74c3e937c2d5c16b1faad80b7e138553 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c266d0fee46ba28dc49abf6d5d55b4c = $(`<div id="html_8c266d0fee46ba28dc49abf6d5d55b4c" style="width: 100.0%; height: 100.0%;">Station : Porte de Vanves<br>Vélos disponibles : 4</div>`)[0];
+                popup_74c3e937c2d5c16b1faad80b7e138553.setContent(html_8c266d0fee46ba28dc49abf6d5d55b4c);
+            
+        
+
+        marker_206b60f5dc5557a884a57564f5823610.bindPopup(popup_74c3e937c2d5c16b1faad80b7e138553)
+        ;
+
+        
+    
+    
+                marker_206b60f5dc5557a884a57564f5823610.setIcon(icon_a7837c54278507a31eb5888b10d33852);
+            
+    
+            var marker_e43fa4160ce359386f79af5094e75296 = L.marker(
+                [48.843949064031825, 2.415081394834419],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_90a81e2fc479497ceac5566a324ef0a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_41f75d816284b54ef6296dace8c4c729 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26211725f544dd1f25b2d07fdc21c240 = $(`<div id="html_26211725f544dd1f25b2d07fdc21c240" style="width: 100.0%; height: 100.0%;">Station : Victor Hugo - Jeanne Jugan<br>Vélos disponibles : 1</div>`)[0];
+                popup_41f75d816284b54ef6296dace8c4c729.setContent(html_26211725f544dd1f25b2d07fdc21c240);
+            
+        
+
+        marker_e43fa4160ce359386f79af5094e75296.bindPopup(popup_41f75d816284b54ef6296dace8c4c729)
+        ;
+
+        
+    
+    
+                marker_e43fa4160ce359386f79af5094e75296.setIcon(icon_90a81e2fc479497ceac5566a324ef0a7);
+            
+    
+            var marker_1472b37b9cc2759a2be08720f9152f5c = L.marker(
+                [48.84706173362218, 2.4787822365760808],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_874dbd27b3daa6a3f3f6fd529ee194a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c16074e7cb95b3bd2d528860d7d4b36 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6755b3305c61a7f3f16968f5c0df61f = $(`<div id="html_a6755b3305c61a7f3f16968f5c0df61f" style="width: 100.0%; height: 100.0%;">Station : Cimetière de Fontenay-sous-Bois<br>Vélos disponibles : 1</div>`)[0];
+                popup_8c16074e7cb95b3bd2d528860d7d4b36.setContent(html_a6755b3305c61a7f3f16968f5c0df61f);
+            
+        
+
+        marker_1472b37b9cc2759a2be08720f9152f5c.bindPopup(popup_8c16074e7cb95b3bd2d528860d7d4b36)
+        ;
+
+        
+    
+    
+                marker_1472b37b9cc2759a2be08720f9152f5c.setIcon(icon_874dbd27b3daa6a3f3f6fd529ee194a1);
+            
+    
+            var marker_0f4447f91d3b1813f051db5ff472f848 = L.marker(
+                [48.83796366147599, 2.2877392172813416],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_da3adc1dbb328b05e57abf1409835095 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_caaae618bd60e9849579a47798228d9c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd502132712d0d64d0f92703a601e508 = $(`<div id="html_dd502132712d0d64d0f92703a601e508" style="width: 100.0%; height: 100.0%;">Station : Lecourbe - Jean Maridor<br>Vélos disponibles : 11</div>`)[0];
+                popup_caaae618bd60e9849579a47798228d9c.setContent(html_dd502132712d0d64d0f92703a601e508);
+            
+        
+
+        marker_0f4447f91d3b1813f051db5ff472f848.bindPopup(popup_caaae618bd60e9849579a47798228d9c)
+        ;
+
+        
+    
+    
+                marker_0f4447f91d3b1813f051db5ff472f848.setIcon(icon_da3adc1dbb328b05e57abf1409835095);
+            
+    
+            var marker_a491d469a5078acecf630e48d424a4e5 = L.marker(
+                [48.84993035512154, 2.294612042605877],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_969f9cdf80c8bd4e5e484f7a33a3e988 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d38ac56ea7b37ab44ef5409a2581600e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1c5da42dfa46f7e0dbbb0b869fa7c46 = $(`<div id="html_b1c5da42dfa46f7e0dbbb0b869fa7c46" style="width: 100.0%; height: 100.0%;">Station : Grenelle - Violet<br>Vélos disponibles : 29</div>`)[0];
+                popup_d38ac56ea7b37ab44ef5409a2581600e.setContent(html_b1c5da42dfa46f7e0dbbb0b869fa7c46);
+            
+        
+
+        marker_a491d469a5078acecf630e48d424a4e5.bindPopup(popup_d38ac56ea7b37ab44ef5409a2581600e)
+        ;
+
+        
+    
+    
+                marker_a491d469a5078acecf630e48d424a4e5.setIcon(icon_969f9cdf80c8bd4e5e484f7a33a3e988);
+            
+    
+            var marker_2242e39ec3270dd899331943a7d61d51 = L.marker(
+                [48.84264375274712, 2.3445946723222733],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_67b09bf2404caf78fa03cdaf0bb9688e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01989982a5d1aa047032760b76f073b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b1ed9b7467613f65a2374a986ff2064 = $(`<div id="html_5b1ed9b7467613f65a2374a986ff2064" style="width: 100.0%; height: 100.0%;">Station : Erasme - Ulm<br>Vélos disponibles : 20</div>`)[0];
+                popup_01989982a5d1aa047032760b76f073b4.setContent(html_5b1ed9b7467613f65a2374a986ff2064);
+            
+        
+
+        marker_2242e39ec3270dd899331943a7d61d51.bindPopup(popup_01989982a5d1aa047032760b76f073b4)
+        ;
+
+        
+    
+    
+                marker_2242e39ec3270dd899331943a7d61d51.setIcon(icon_67b09bf2404caf78fa03cdaf0bb9688e);
+            
+    
+            var marker_17f48c8121ffe273633300f2448602d4 = L.marker(
+                [48.825218683556734, 2.3107116669416428],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_f6bb9de82c90ef3a2415ecb50b44daa5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_09845f037f721e4f4639577399b5d7c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7dbf43c751150e670992ec37fecfd07 = $(`<div id="html_a7dbf43c751150e670992ec37fecfd07" style="width: 100.0%; height: 100.0%;">Station : Marc Sangnier - Porte de Vanves<br>Vélos disponibles : 6</div>`)[0];
+                popup_09845f037f721e4f4639577399b5d7c5.setContent(html_a7dbf43c751150e670992ec37fecfd07);
+            
+        
+
+        marker_17f48c8121ffe273633300f2448602d4.bindPopup(popup_09845f037f721e4f4639577399b5d7c5)
+        ;
+
+        
+    
+    
+                marker_17f48c8121ffe273633300f2448602d4.setIcon(icon_f6bb9de82c90ef3a2415ecb50b44daa5);
+            
+    
+            var marker_e43d9352aa68031931deae35e6ba85c8 = L.marker(
+                [48.88794016394694, 2.326124420314341],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_3e8f8cfbccd1ba6e7fc8257dd5f0c057 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8cf753f8fd0040a77bb23633487ae8ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a56766f7aa04c7c375b2228a56d1fdf1 = $(`<div id="html_a56766f7aa04c7c375b2228a56d1fdf1" style="width: 100.0%; height: 100.0%;">Station : Etienne Jodelle - Saint Ouen<br>Vélos disponibles : 4</div>`)[0];
+                popup_8cf753f8fd0040a77bb23633487ae8ce.setContent(html_a56766f7aa04c7c375b2228a56d1fdf1);
+            
+        
+
+        marker_e43d9352aa68031931deae35e6ba85c8.bindPopup(popup_8cf753f8fd0040a77bb23633487ae8ce)
+        ;
+
+        
+    
+    
+                marker_e43d9352aa68031931deae35e6ba85c8.setIcon(icon_3e8f8cfbccd1ba6e7fc8257dd5f0c057);
+            
+    
+            var marker_e4c0fa6e103f0a0f23346829a0c2c42b = L.marker(
+                [48.86703740186721, 2.336716018617153],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_90d8370827f11ea0fbd7b8ba165ad0c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b5e9c6bfa804c182064b4781b9c119ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8e49f263ed0fff6cabf230fcfb7dc63 = $(`<div id="html_a8e49f263ed0fff6cabf230fcfb7dc63" style="width: 100.0%; height: 100.0%;">Station : Chabanais - Petits Champs<br>Vélos disponibles : 30</div>`)[0];
+                popup_b5e9c6bfa804c182064b4781b9c119ee.setContent(html_a8e49f263ed0fff6cabf230fcfb7dc63);
+            
+        
+
+        marker_e4c0fa6e103f0a0f23346829a0c2c42b.bindPopup(popup_b5e9c6bfa804c182064b4781b9c119ee)
+        ;
+
+        
+    
+    
+                marker_e4c0fa6e103f0a0f23346829a0c2c42b.setIcon(icon_90d8370827f11ea0fbd7b8ba165ad0c0);
+            
+    
+            var marker_5fabbc569b72697acfbf8d3a79e61ec6 = L.marker(
+                [48.890451120965, 2.3490573929687],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_5cdf0e961caa765ccc3e27a9a337cc2b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ce9efe5782484ef0c55195622f968e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e911f460dbeb05f63f8dfdc06662803c = $(`<div id="html_e911f460dbeb05f63f8dfdc06662803c" style="width: 100.0%; height: 100.0%;">Station : Marcadet - Barbès<br>Vélos disponibles : 4</div>`)[0];
+                popup_4ce9efe5782484ef0c55195622f968e7.setContent(html_e911f460dbeb05f63f8dfdc06662803c);
+            
+        
+
+        marker_5fabbc569b72697acfbf8d3a79e61ec6.bindPopup(popup_4ce9efe5782484ef0c55195622f968e7)
+        ;
+
+        
+    
+    
+                marker_5fabbc569b72697acfbf8d3a79e61ec6.setIcon(icon_5cdf0e961caa765ccc3e27a9a337cc2b);
+            
+    
+            var marker_bc3b7e6197fba0ab1ce0d000c450d7ea = L.marker(
+                [48.84240765130395, 2.281037718057633],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_c491db4f7e45e1eed7d258d62d11e192 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7390bb3f8cf31adbb4b8cf822c0f2fd8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2767858a8b7901392226e0acfffbb2d = $(`<div id="html_e2767858a8b7901392226e0acfffbb2d" style="width: 100.0%; height: 100.0%;">Station : Cevennes - Bergers<br>Vélos disponibles : 10</div>`)[0];
+                popup_7390bb3f8cf31adbb4b8cf822c0f2fd8.setContent(html_e2767858a8b7901392226e0acfffbb2d);
+            
+        
+
+        marker_bc3b7e6197fba0ab1ce0d000c450d7ea.bindPopup(popup_7390bb3f8cf31adbb4b8cf822c0f2fd8)
+        ;
+
+        
+    
+    
+                marker_bc3b7e6197fba0ab1ce0d000c450d7ea.setIcon(icon_c491db4f7e45e1eed7d258d62d11e192);
+            
+    
+            var marker_408d82a14a03da95ab77708dc456454b = L.marker(
+                [48.864920982538, 2.3025491823859],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_7fc8f2e434f11ffcccb26639f5192a2a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8bff91351af013cde6c1de431487bf41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d5d3bf8ee9852055ea156bc1e7fd46d = $(`<div id="html_4d5d3bf8ee9852055ea156bc1e7fd46d" style="width: 100.0%; height: 100.0%;">Station : Place de la Reine Astrid<br>Vélos disponibles : 51</div>`)[0];
+                popup_8bff91351af013cde6c1de431487bf41.setContent(html_4d5d3bf8ee9852055ea156bc1e7fd46d);
+            
+        
+
+        marker_408d82a14a03da95ab77708dc456454b.bindPopup(popup_8bff91351af013cde6c1de431487bf41)
+        ;
+
+        
+    
+    
+                marker_408d82a14a03da95ab77708dc456454b.setIcon(icon_7fc8f2e434f11ffcccb26639f5192a2a);
+            
+    
+            var marker_7aaeadc03dfb75d785ccb51d1f0fabb7 = L.marker(
+                [48.872420063053, 2.3483952362828],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_f2a747a63dd78af0454b392574a64381 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32d05b8e29edc2db90fc23edafec92f8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b708d9e3480be4a3ad0eee2e822ba4c = $(`<div id="html_7b708d9e3480be4a3ad0eee2e822ba4c" style="width: 100.0%; height: 100.0%;">Station : Enghien - Faubourg Poissonnière<br>Vélos disponibles : 8</div>`)[0];
+                popup_32d05b8e29edc2db90fc23edafec92f8.setContent(html_7b708d9e3480be4a3ad0eee2e822ba4c);
+            
+        
+
+        marker_7aaeadc03dfb75d785ccb51d1f0fabb7.bindPopup(popup_32d05b8e29edc2db90fc23edafec92f8)
+        ;
+
+        
+    
+    
+                marker_7aaeadc03dfb75d785ccb51d1f0fabb7.setIcon(icon_f2a747a63dd78af0454b392574a64381);
+            
+    
+            var marker_749f6fd34588e9c23e06fc457be92a51 = L.marker(
+                [48.884672142095, 2.3919698596001],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_8ed2796dd45f96303cb64f7e91aae8fd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4913f381cad31e28b16295938cc1a5b8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_822e6810c8dab003f351748a1b0977dd = $(`<div id="html_822e6810c8dab003f351748a1b0977dd" style="width: 100.0%; height: 100.0%;">Station : Manin - Carrières d'Amérique<br>Vélos disponibles : 1</div>`)[0];
+                popup_4913f381cad31e28b16295938cc1a5b8.setContent(html_822e6810c8dab003f351748a1b0977dd);
+            
+        
+
+        marker_749f6fd34588e9c23e06fc457be92a51.bindPopup(popup_4913f381cad31e28b16295938cc1a5b8)
+        ;
+
+        
+    
+    
+                marker_749f6fd34588e9c23e06fc457be92a51.setIcon(icon_8ed2796dd45f96303cb64f7e91aae8fd);
+            
+    
+            var marker_9165503875171eae497b2d59f6058375 = L.marker(
+                [48.886062068226, 2.2917001576821],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_fb46740e7d4e89b91b57b49cf590b870 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_65837127b8f2b985d25ecd110e6751d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b2c78c6d2af866bee9f13a955da7f53 = $(`<div id="html_2b2c78c6d2af866bee9f13a955da7f53" style="width: 100.0%; height: 100.0%;">Station : Place de la Porte de Champeret<br>Vélos disponibles : 7</div>`)[0];
+                popup_65837127b8f2b985d25ecd110e6751d9.setContent(html_2b2c78c6d2af866bee9f13a955da7f53);
+            
+        
+
+        marker_9165503875171eae497b2d59f6058375.bindPopup(popup_65837127b8f2b985d25ecd110e6751d9)
+        ;
+
+        
+    
+    
+                marker_9165503875171eae497b2d59f6058375.setIcon(icon_fb46740e7d4e89b91b57b49cf590b870);
+            
+    
+            var marker_b578896e27f23f6aa1e0774a37ed3f11 = L.marker(
+                [48.873409276267, 2.2977904602885],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_c1f6c4e66c2130f18b513707168eb277 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_674a8a76446e32abc1039fb0e6d9c6f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d61304e6dfc20b96383cd98c124c0c70 = $(`<div id="html_d61304e6dfc20b96383cd98c124c0c70" style="width: 100.0%; height: 100.0%;">Station : Arsène Houssaye - Champs-Elysées<br>Vélos disponibles : 1</div>`)[0];
+                popup_674a8a76446e32abc1039fb0e6d9c6f4.setContent(html_d61304e6dfc20b96383cd98c124c0c70);
+            
+        
+
+        marker_b578896e27f23f6aa1e0774a37ed3f11.bindPopup(popup_674a8a76446e32abc1039fb0e6d9c6f4)
+        ;
+
+        
+    
+    
+                marker_b578896e27f23f6aa1e0774a37ed3f11.setIcon(icon_c1f6c4e66c2130f18b513707168eb277);
+            
+    
+            var marker_a103037b1710aa7b9bac027e00610408 = L.marker(
+                [48.847909849567, 2.3424898070094],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_6631683bdfa83899f853226e92d65603 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_97c53d44ee84ff9586abb8da9830f5d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4abd89ff6e68d0d4ffed068dec820ac6 = $(`<div id="html_4abd89ff6e68d0d4ffed068dec820ac6" style="width: 100.0%; height: 100.0%;">Station : Victor Cousin - Cujas<br>Vélos disponibles : 15</div>`)[0];
+                popup_97c53d44ee84ff9586abb8da9830f5d3.setContent(html_4abd89ff6e68d0d4ffed068dec820ac6);
+            
+        
+
+        marker_a103037b1710aa7b9bac027e00610408.bindPopup(popup_97c53d44ee84ff9586abb8da9830f5d3)
+        ;
+
+        
+    
+    
+                marker_a103037b1710aa7b9bac027e00610408.setIcon(icon_6631683bdfa83899f853226e92d65603);
+            
+    
+            var marker_53efbaa16d5de5ffbd8e32c583d759f7 = L.marker(
+                [48.821092374256104, 2.333725690841675],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_524b5069772f6057670af62927b02179 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0bec8972697570a1a895b38815d7b47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b034cf6e78fbe7b7fd6ff564440f562 = $(`<div id="html_3b034cf6e78fbe7b7fd6ff564440f562" style="width: 100.0%; height: 100.0%;">Station : David Weill - Parc Montsouris<br>Vélos disponibles : 1</div>`)[0];
+                popup_f0bec8972697570a1a895b38815d7b47.setContent(html_3b034cf6e78fbe7b7fd6ff564440f562);
+            
+        
+
+        marker_53efbaa16d5de5ffbd8e32c583d759f7.bindPopup(popup_f0bec8972697570a1a895b38815d7b47)
+        ;
+
+        
+    
+    
+                marker_53efbaa16d5de5ffbd8e32c583d759f7.setIcon(icon_524b5069772f6057670af62927b02179);
+            
+    
+            var marker_7905e95aa3c903ba055aedca76aceb7a = L.marker(
+                [48.836191728066666, 2.2811267160086417],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_f486e28e97ef07fc11f905fa33c676bf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e3b24448833672fc8e3e33bba6df1b6c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42cb543f65d00cb31db3c7fd3a7bd54f = $(`<div id="html_42cb543f65d00cb31db3c7fd3a7bd54f" style="width: 100.0%; height: 100.0%;">Station : Place Robert Guillemard<br>Vélos disponibles : 17</div>`)[0];
+                popup_e3b24448833672fc8e3e33bba6df1b6c.setContent(html_42cb543f65d00cb31db3c7fd3a7bd54f);
+            
+        
+
+        marker_7905e95aa3c903ba055aedca76aceb7a.bindPopup(popup_e3b24448833672fc8e3e33bba6df1b6c)
+        ;
+
+        
+    
+    
+                marker_7905e95aa3c903ba055aedca76aceb7a.setIcon(icon_f486e28e97ef07fc11f905fa33c676bf);
+            
+    
+            var marker_aaec2322e4f5045083f7b013d3399b67 = L.marker(
+                [48.891102392008, 2.4028435349464],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_ff79320d45d8057cf24316f8160f3ace = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f867cbc4ac01f9fe44b26d3711c7ede = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2eaa8c75a5e4c7802d1f7cebd2ece8f = $(`<div id="html_f2eaa8c75a5e4c7802d1f7cebd2ece8f" style="width: 100.0%; height: 100.0%;">Station : Hoche - Jean Lolive<br>Vélos disponibles : 16</div>`)[0];
+                popup_7f867cbc4ac01f9fe44b26d3711c7ede.setContent(html_f2eaa8c75a5e4c7802d1f7cebd2ece8f);
+            
+        
+
+        marker_aaec2322e4f5045083f7b013d3399b67.bindPopup(popup_7f867cbc4ac01f9fe44b26d3711c7ede)
+        ;
+
+        
+    
+    
+                marker_aaec2322e4f5045083f7b013d3399b67.setIcon(icon_ff79320d45d8057cf24316f8160f3ace);
+            
+    
+            var marker_79f3268433c43f86faaea9af1e7c54b9 = L.marker(
+                [48.790114, 2.4025777],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_00a2f37de7df4f9d7a2990a117730ca2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_424fc9fd3185777c10cbe78c4378dade = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30cfcc480e892df95ab0e7b2f6e2024d = $(`<div id="html_30cfcc480e892df95ab0e7b2f6e2024d" style="width: 100.0%; height: 100.0%;">Station : Gabriel Péri - Danielle Casanova<br>Vélos disponibles : 0</div>`)[0];
+                popup_424fc9fd3185777c10cbe78c4378dade.setContent(html_30cfcc480e892df95ab0e7b2f6e2024d);
+            
+        
+
+        marker_79f3268433c43f86faaea9af1e7c54b9.bindPopup(popup_424fc9fd3185777c10cbe78c4378dade)
+        ;
+
+        
+    
+    
+                marker_79f3268433c43f86faaea9af1e7c54b9.setIcon(icon_00a2f37de7df4f9d7a2990a117730ca2);
+            
+    
+            var marker_6ed12313206fd3ae37bbf47e2e6a540f = L.marker(
+                [48.84107178161383, 2.355475388467312],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_78a25ec0ab14cf7ba4465b51061aa2f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_39d305292c0959c0420b168d0ae02307 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9672160e923fdba2877c2a27f1100bab = $(`<div id="html_9672160e923fdba2877c2a27f1100bab" style="width: 100.0%; height: 100.0%;">Station : Censier - Jardin des Plantes<br>Vélos disponibles : 24</div>`)[0];
+                popup_39d305292c0959c0420b168d0ae02307.setContent(html_9672160e923fdba2877c2a27f1100bab);
+            
+        
+
+        marker_6ed12313206fd3ae37bbf47e2e6a540f.bindPopup(popup_39d305292c0959c0420b168d0ae02307)
+        ;
+
+        
+    
+    
+                marker_6ed12313206fd3ae37bbf47e2e6a540f.setIcon(icon_78a25ec0ab14cf7ba4465b51061aa2f1);
+            
+    
+            var marker_8870ecb1dda0a402982e701210b42094 = L.marker(
+                [48.787553654715644, 2.306235730648041],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_5ca9cc72ddd02391cd7c6e43f04df8e0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47bb970a88d8c2341c6351bb53f75c72 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02c4f40ca6b071cce7c1bdeccbc72c4d = $(`<div id="html_02c4f40ca6b071cce7c1bdeccbc72c4d" style="width: 100.0%; height: 100.0%;">Station : Tertres - Fontaine<br>Vélos disponibles : 1</div>`)[0];
+                popup_47bb970a88d8c2341c6351bb53f75c72.setContent(html_02c4f40ca6b071cce7c1bdeccbc72c4d);
+            
+        
+
+        marker_8870ecb1dda0a402982e701210b42094.bindPopup(popup_47bb970a88d8c2341c6351bb53f75c72)
+        ;
+
+        
+    
+    
+                marker_8870ecb1dda0a402982e701210b42094.setIcon(icon_5ca9cc72ddd02391cd7c6e43f04df8e0);
+            
+    
+            var marker_7406825c5cc4655599fa634f394243b6 = L.marker(
+                [48.8094458, 2.3903009],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_2858d7b1182dd618f6cc84a19265c7cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee716b78f5dfb96a2338699b143f04ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3b501867aca25a094f66aa70415fb38 = $(`<div id="html_e3b501867aca25a094f66aa70415fb38" style="width: 100.0%; height: 100.0%;">Station : Raspail - Manufacture des Oeillets<br>Vélos disponibles : 25</div>`)[0];
+                popup_ee716b78f5dfb96a2338699b143f04ff.setContent(html_e3b501867aca25a094f66aa70415fb38);
+            
+        
+
+        marker_7406825c5cc4655599fa634f394243b6.bindPopup(popup_ee716b78f5dfb96a2338699b143f04ff)
+        ;
+
+        
+    
+    
+                marker_7406825c5cc4655599fa634f394243b6.setIcon(icon_2858d7b1182dd618f6cc84a19265c7cb);
+            
+    
+            var marker_af814f68a1d54fc501f48ab458268a2a = L.marker(
+                [48.86132665908402, 2.349419631063938],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_baa8fc7ba4143751c5a430f301ed0864 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_efbcf6fb380fff1519ff1fdedc4449f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa36208fece6c4c004c3c8e4120405e6 = $(`<div id="html_aa36208fece6c4c004c3c8e4120405e6" style="width: 100.0%; height: 100.0%;">Station : Cossonnerie - Sébastopol<br>Vélos disponibles : 22</div>`)[0];
+                popup_efbcf6fb380fff1519ff1fdedc4449f9.setContent(html_aa36208fece6c4c004c3c8e4120405e6);
+            
+        
+
+        marker_af814f68a1d54fc501f48ab458268a2a.bindPopup(popup_efbcf6fb380fff1519ff1fdedc4449f9)
+        ;
+
+        
+    
+    
+                marker_af814f68a1d54fc501f48ab458268a2a.setIcon(icon_baa8fc7ba4143751c5a430f301ed0864);
+            
+    
+            var marker_e65ac848a04fdb5dcc2861982c7ea760 = L.marker(
+                [48.86431136, 2.4105210229754],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_10be808587a416264a1613d50db44b1a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_561da536401fb89cc1706ed6119bafa2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d873511367edb69bb69fae82d205ddcf = $(`<div id="html_d873511367edb69bb69fae82d205ddcf" style="width: 100.0%; height: 100.0%;">Station : Louis Lumière - Porte de Bagnolet<br>Vélos disponibles : 0</div>`)[0];
+                popup_561da536401fb89cc1706ed6119bafa2.setContent(html_d873511367edb69bb69fae82d205ddcf);
+            
+        
+
+        marker_e65ac848a04fdb5dcc2861982c7ea760.bindPopup(popup_561da536401fb89cc1706ed6119bafa2)
+        ;
+
+        
+    
+    
+                marker_e65ac848a04fdb5dcc2861982c7ea760.setIcon(icon_10be808587a416264a1613d50db44b1a);
+            
+    
+            var marker_632c8819aae72b6538ad04a9dc7ca4ce = L.marker(
+                [48.892663, 2.172411],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_a2c7af190b6731f729484cb5248e1c7c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71acb64659ef7dc2568b17ee2d9cf687 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_caaf1feaa6ee54c6af25fbd27852c465 = $(`<div id="html_caaf1feaa6ee54c6af25fbd27852c465" style="width: 100.0%; height: 100.0%;">Station : Henri Ste-Claire Déville - Paul Héroult<br>Vélos disponibles : 15</div>`)[0];
+                popup_71acb64659ef7dc2568b17ee2d9cf687.setContent(html_caaf1feaa6ee54c6af25fbd27852c465);
+            
+        
+
+        marker_632c8819aae72b6538ad04a9dc7ca4ce.bindPopup(popup_71acb64659ef7dc2568b17ee2d9cf687)
+        ;
+
+        
+    
+    
+                marker_632c8819aae72b6538ad04a9dc7ca4ce.setIcon(icon_a2c7af190b6731f729484cb5248e1c7c);
+            
+    
+            var marker_a6947db02ba3032d366fac83aadf4645 = L.marker(
+                [48.854898095789295, 2.4186685681343083],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_3d1c8dd15f82e5978ac58fc53f56205f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_195255f0d55dad46922c471501544318 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0487293fe1d4e2c74806c1e04a07b3da = $(`<div id="html_0487293fe1d4e2c74806c1e04a07b3da" style="width: 100.0%; height: 100.0%;">Station : Paris - Emile Zola<br>Vélos disponibles : 6</div>`)[0];
+                popup_195255f0d55dad46922c471501544318.setContent(html_0487293fe1d4e2c74806c1e04a07b3da);
+            
+        
+
+        marker_a6947db02ba3032d366fac83aadf4645.bindPopup(popup_195255f0d55dad46922c471501544318)
+        ;
+
+        
+    
+    
+                marker_a6947db02ba3032d366fac83aadf4645.setIcon(icon_3d1c8dd15f82e5978ac58fc53f56205f);
+            
+    
+            var marker_11b65983110736938ef6b862eb4ad8c9 = L.marker(
+                [48.821475594736775, 2.3026576638221745],
+                {
+}
+            ).addTo(map_335196fa5c8dc2b9136c22efb85a9957);
+        
+    
+            var icon_9d4bd9a9854875db687f6a6a4da8baa2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_903b1350380284cbe69d5f851286927a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_078c74253b1914f4d8b0a9d9f5620fae = $(`<div id="html_078c74253b1914f4d8b0a9d9f5620fae" style="width: 100.0%; height: 100.0%;">Station : Jean Jaurès - Salvador Allende<br>Vélos disponibles : 8</div>`)[0];
+                popup_903b1350380284cbe69d5f851286927a.setContent(html_078c74253b1914f4d8b0a9d9f5620fae);
+            
+        
+
+        marker_11b65983110736938ef6b862eb4ad8c9.bindPopup(popup_903b1350380284cbe69d5f851286927a)
+        ;
+
+        
+    
+    
+                marker_11b65983110736938ef6b862eb4ad8c9.setIcon(icon_9d4bd9a9854875db687f6a6a4da8baa2);
+            
+</script>
+</html>

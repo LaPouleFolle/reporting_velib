@@ -4,8 +4,7 @@ from openpyxl import load_workbook
 from openpyxl.styles import Font
 from openpyxl.chart import BarChart, PieChart, Reference
 
-
-def generate_excel_report(df_raw, output_path="data/rapport_velib.xlsx"):
+def generate_excel_report(df_raw, df_top5, output_path="data/rapport_velib.xlsx"):
 
     # on créé le dossier
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -106,25 +105,27 @@ def generate_excel_report(df_raw, output_path="data/rapport_velib.xlsx"):
     ws.add_chart(bar, "E18")
 
     # top 5 des communes 
-    communes = ["Paris", "Boulogne-Billancourt", "Montreuil", "Nanterre", "Asnières-sur-Seine"]
-    
-    for i, commune in enumerate(communes):
-        ligne = 18 + i
-        ws["A" + str(ligne)] = commune
-        ws["B" + str(ligne)] = f'=SUMIF(DATA!M:M, "{commune}", DATA!D:D)'
+    ws["A17"] = "Top 5 des communes les plus desservies en vélo"
+    ws["A17"].font = Font(bold=True, underline="single")
+
+    # On utilise les données calculées par compute_commune_analysis
+    for idx, row in df_top5.iterrows():
+        ligne_actuelle = 18 + idx
+        ws["A" + str(ligne_actuelle)] = row['nom_arrondissement_communes']
+        ws["B" + str(ligne_actuelle)] = round(row['numbikesavailable'], 1)
 
     # barplot du top commune
     bar_top = BarChart()
-    bar.title = "Top 5 des communes les plus deservie en velo "
+    bar_top.type = "bar"  # Barres horizontales pour un style épuré
+    bar_top.title = "Top 5 des communes (Moyenne vélos disponibles)"
+    bar_top.x_axis.title = "Moyenne"
 
     data_top = Reference(ws, min_col=2, min_row=18, max_row=22)
     labels_top = Reference(ws, min_col=1, min_row=18, max_row=22)
-    
+
     bar_top.add_data(data=data_top)
     bar_top.set_categories(labels_top)
     bar_top.legend = None
-    
-    # On place ce nouveau graphique plus bas
     ws.add_chart(bar_top, "E32")
 
     # je sauvegarde quand même
