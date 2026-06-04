@@ -24,10 +24,10 @@ def main():
     df_top5 = compute_commune_analysis(df_clean).head(5).reset_index() # Calcule ton Top 5
     
     # Création et sauvegarde de la carte spatiale
-    # 1. On crée une carte centrée sur Paris (Latitude: 48.8566, Longitude: 2.3522)
+    # on crée une carte centrée sur Paris (Latitude: 48.8566, Longitude: 2.3522)
     carte = folium.Map(location=[48.8566, 2.3522], zoom_start=12)
     
-    # 2. Pour ne pas faire ramer l'ordinateur, on affiche les 100 premières stations
+    # our ne pas faire ramer l'ordinateur, on affiche les 100 premières stations
     df_carte = gdf.head(100)
     
     for idx, row in df_carte.iterrows():
@@ -36,14 +36,14 @@ def main():
         nom_station = row['name']
         velos_dispos = row['numbikesavailable']
         
-        # 3. On ajoute un petit marqueur sur la carte pour chaque station
+        # on ajoute un petit marqueur sur la carte pour chaque station
         folium.Marker(
             location=[lat, lon],
             popup= f"Station : {nom_station}<br>Vélos disponibles : {velos_dispos}",
             icon = folium.Icon(color="blue", icon="info-sign")
         ).add_to(carte)
     
-    # 4. On s'assure que le dossier 'data' existe et on sauvegarde au format WEB (HTML)
+    #  s'assure que le dossier 'data' existe et on sauvegarde au format WEB (HTML)
     os.makedirs("data", exist_ok=True)
     carte.save(OUTPUT_CARTE)
     print(f"ma carte se trouve ici : {OUTPUT_CARTE}")
