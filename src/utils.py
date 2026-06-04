@@ -24,6 +24,6 @@ def compute_bike_mix(df: pd.DataFrame):
 
 def compute_commune_analysis(df: pd.DataFrame) -> pd.DataFrame:
     """calcule les moyennes de disponibilité et d'occupation par commune."""
-    commune_analysis = df.groupby('nom_arrondissement_communes')[['numbikesavailable', 'occupation_rate']].mean()
-    commune_analysis = commune_analysis.sort_values(by='numbikesavailable', ascending=False)
-    return commune_analysis
+    commune = df.groupby('nom_arrondissement_communes')[['numbikesavailable', 'occupation_rate']].mean()
+    commune = commune.sort_values(by='numbikesavailable', ascending=False)
+    return commune
