@@ -7,10 +7,6 @@ from openpyxl.utils import get_column_letter
 #from openpyxl.drawing.image import Image # ajout de l'image pour ma carte figé
 from openpyxl.worksheet.datavalidation import DataValidation
 
-# =========================================================================
-# FONCTIONS SPÉCIALISÉES (Chacune gère une seule action de la liste)
-# =========================================================================
-
 def _creation_du_dossier(output_path):
     # on créé le dossier
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -43,24 +39,33 @@ def _liste_deroulante_communes(ws, df_raw):
     ws["A1"].font = Font(bold=True, color="0000FF") # Mis en bleu pour attirer l'œil
     ws["B1"] = "Paris" # Valeur par défaut obligatoire
 
-    # TECHNIQUE SÉCURISÉE : Extraction des communes uniques pour éviter les doublons et les bugs de longueur Excel
+    # Extraction des communes uniques pour éviter les doublons 
     communes_uniques = sorted(df_raw['nom_arrondissement_communes'].dropna().unique())
     
     # Construction de la chaîne de caractères entourée de guillemets pour Excel
     liste_communes_txt = f'"{",".join(communes_uniques)}"'
     
-    # On crée la validation en lui donnant la chaîne de texte formatée
+    # On crée la validation 
     dv = DataValidation(type="list", formula1=liste_communes_txt, allow_blank=True)
     
-    dv.error = "Votre commune n'est pas dans la liste"
-    dv.errorTitle = "Saisie invalide"
-    dv.prompt = "SVP choisissez une commune dans la liste"
-    dv.promptTitle = "Liste des communes"
-
-    # IMPORTANT : On ajoute la validation à la feuille PUIS on l'associe à la cellule
+    # on ajoute la validation à la feuille PUIS on l'associe à la cellule
     ws.add_data_validation(dv)
     dv.add(ws["B1"])
 
+    # ajoute du filtre par nom de station
+    ws["E1"] = "Choisir une station :"
+    ws["E1"].font = Font(bold=True, color="0000FF")
+    
+    stations_paris = sorted(df_raw[df_raw['nom_arrondissement_communes'] == 'Paris']['name'].dropna().unique())
+    if stations_paris:
+        ws["F1"] = stations_paris[0] # Met la première station de Paris par défaut
+    
+    #on recupere les données name
+    max_data_row = len(df_raw) + 1
+    dv_station = DataValidation(type="list", formula1=f"DATA!$B$2:$B${max_data_row}", allow_blank=True)
+    
+    ws.add_data_validation(dv_station)
+    dv_station.add(ws["F1"])
 
 def _recup_colonne(df_raw):
     # je recupere les colonnes 
@@ -159,6 +164,22 @@ def _graphiques(ws):
 
     ws.add_chart(bar, "N4")
 
+    # barplot du top commune
+    bar_top = BarChart()
+    bar_top.type = "bar"  # Barres horizontales pour un style épuré
+    bar_top.title = "Top 5 des communes (Moyenne vélos disponibles)"
+    bar_top.x_axis.title = "Moyenne"
+    bar_top.width = 15  
+    bar_top.height = 12
+
+    data_top = Reference(ws, min_col=2, min_row=18, max_row=22)
+    labels_top = Reference(ws, min_col=1, min_row=18, max_row=22)
+
+    bar_top.add_data(data=data_top)
+    bar_top.set_categories(labels_top)
+    bar_top.legend = None
+    ws.add_chart(bar_top, "E35") # Décalé ici pour ne pas écraser le graphique combiné en E18
+
     # Graphique en barre combiné 
     # l'histogramme du nbre de vélos
     chart_velo = BarChart()
@@ -187,7 +208,6 @@ def _graphiques(ws):
     chart_velo += chart_line
 
     ws.add_chart(chart_velo, "E18")
-
 
 def _sauvegarde(wb, output_path):
     # je sauvegarde quand même
