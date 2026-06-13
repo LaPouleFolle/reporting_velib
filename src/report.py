@@ -1,11 +1,11 @@
 import os
 import pandas as pd
 from openpyxl import load_workbook
-from openpyxl.styles import Font
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.chart import BarChart, PieChart, LineChart, Reference
 from openpyxl.utils import get_column_letter
-#from openpyxl.drawing.image import Image # ajout de l'image pour ma carte figé
 from openpyxl.worksheet.datavalidation import DataValidation
+from openpyxl.drawing.image import Image # RE-AJOUTÉ ICI
 
 def _creation_du_dossier(output_path):
     # on créé le dossier
@@ -27,45 +27,32 @@ def _indicateurs(wb):
     # l'onglet indicator ou je vais mettre mes graph
     ws = wb.create_sheet("Indicateurs")
 
-    # le titre du rapport
-    ws["A3"] = "TABLEAU DE BORD DU RÉSEAU VÉLIB"
-    ws["A3"].font = Font(bold=True, size=14)
+    # le titre du rapport en M2 pour qu'il soit centrer 
+    ws["M2"] = "TABLEAU DE BORD DU RÉSEAU VÉLIB"
+    ws["M2"].font = Font(bold=True, size=16, color="1F497D")
+    
     return ws
 
 
 def _liste_deroulante_communes(ws, df_raw):
-    # on ajoute le label et la liste en B1
+    # on met le filtre en B1
     ws["A1"] = "Choisir une commune :"
-    ws["A1"].font = Font(bold=True, color="0000FF") # Mis en bleu pour attirer l'œil
-    ws["B1"] = "Paris" # Valeur par défaut obligatoire
+    ws["A1"].font = Font(bold=True, color="0000FF") # titre du filtre 
+    ws["B1"] = "Paris" # valeur par défaut obligatoire
 
-    # Extraction des communes uniques pour éviter les doublons 
+    # extraction des communes uniques pour éviter les doublons 
     communes_uniques = sorted(df_raw['nom_arrondissement_communes'].dropna().unique())
     
-    # Construction de la chaîne de caractères entourée de guillemets pour Excel
+    # chaine de caractére pour l'affichage
     liste_communes_txt = f'"{",".join(communes_uniques)}"'
     
-    # On crée la validation 
+    # la liste deroulante
     dv = DataValidation(type="list", formula1=liste_communes_txt, allow_blank=True)
     
     # on ajoute la validation à la feuille PUIS on l'associe à la cellule
     ws.add_data_validation(dv)
     dv.add(ws["B1"])
 
-    # ajoute du filtre par nom de station
-    ws["E1"] = "Choisir une station :"
-    ws["E1"].font = Font(bold=True, color="0000FF")
-    
-    stations_paris = sorted(df_raw[df_raw['nom_arrondissement_communes'] == 'Paris']['name'].dropna().unique())
-    if stations_paris:
-        ws["F1"] = stations_paris[0] # Met la première station de Paris par défaut
-    
-    #on recupere les données name
-    max_data_row = len(df_raw) + 1
-    dv_station = DataValidation(type="list", formula1=f"DATA!$B$2:$B${max_data_row}", allow_blank=True)
-    
-    ws.add_data_validation(dv_station)
-    dv_station.add(ws["F1"])
 
 def _recup_colonne(df_raw):
     # je recupere les colonnes 
@@ -77,14 +64,13 @@ def _recup_colonne(df_raw):
     col_meca = headers.index("mechanical") + 1
     col_ebike = headers.index("ebike") + 1
 
-    # 
     return {
         "capacity": get_column_letter(col_capacity),
         "docks": get_column_letter(col_docks),
         "bikes": get_column_letter(col_bikes),
         "meca": get_column_letter(col_meca),
         "ebike": get_column_letter(col_ebike)
-    }
+    } ### dictionnaire contenant le nom de la variable et la colonne dans laquelle elle se trouve
 
 
 def _kpi_du_reseau(ws, cols, max_row):
@@ -92,7 +78,7 @@ def _kpi_du_reseau(ws, cols, max_row):
     ws["A4"] = "Indicateurs Réseau"
     ws["A4"].font = Font(bold=True, underline="single")
 
-    # Utilisation de SUMIF pour filtrer dynamiquement en fonction de la valeur rentrer dans ma cellule B1
+    # on aplique le calcul en fonction de la variable dans B1 (le filtre)
     ws["A5"] = "Capacité totale"
     ws["B5"] = f'=SUMIF(DATA!M2:M{max_row}, B1, DATA!{cols["capacity"]}2:{cols["capacity"]}{max_row})'
 
@@ -106,7 +92,7 @@ def _kpi_du_reseau(ws, cols, max_row):
     ws["B8"] = "=B7/B5"
     ws["B8"].number_format = "0.00%"
 
-
+    
 def _kpi_du_types_velos(ws, cols, max_row):
     # mes indicateurs sur les types de vélos
     ws["A11"] = "Répartition par type de vélo"
@@ -127,7 +113,7 @@ def _top5_communes(ws, df_top5):
     ws["A17"] = "Top 5 des communes les plus desservies en vélo"
     ws["A17"].font = Font(bold=True, underline="single")
 
-    # On utilise les données calculées par compute_commune_analysis
+    # On utilise les données calculées par commune_analysis
     for idx, row in df_top5.iterrows():
         ligne_actuelle = 18 + idx
         ws["A" + str(ligne_actuelle)] = row['nom_arrondissement_communes']
@@ -148,7 +134,7 @@ def _graphiques(ws):
 
     ws.add_chart(pie, "E4")
 
-    # barplot
+    # barplot de disponibilité (remis d'origine sur les lignes 5 à 7)
     bar = BarChart()
     bar.title = "Disponibilité globale du réseau"
     bar.y_axis.title = "Quantité"
@@ -164,29 +150,12 @@ def _graphiques(ws):
 
     ws.add_chart(bar, "N4")
 
-    # barplot du top commune
-    bar_top = BarChart()
-    bar_top.type = "bar"  # Barres horizontales pour un style épuré
-    bar_top.title = "Top 5 des communes (Moyenne vélos disponibles)"
-    bar_top.x_axis.title = "Moyenne"
-    bar_top.width = 15  
-    bar_top.height = 12
-
-    data_top = Reference(ws, min_col=2, min_row=18, max_row=22)
-    labels_top = Reference(ws, min_col=1, min_row=18, max_row=22)
-
-    bar_top.add_data(data=data_top)
-    bar_top.set_categories(labels_top)
-    bar_top.legend = None
-    ws.add_chart(bar_top, "E35") # Décalé ici pour ne pas écraser le graphique combiné en E18
-
     # Graphique en barre combiné 
-    # l'histogramme du nbre de vélos
     chart_velo = BarChart()
     chart_velo.title = "Nombre de vélo par occupation dans chaque commune du top"
-    chart_velo.style = 10 ### cette commande c'est pour gérer le stype du graphique style de base 10
-    chart_velo.width = 15   # Largeur en cm 
-    chart_velo.height = 12  ### la hauteur du graph
+    chart_velo.style = 10 
+    chart_velo.width = 15   
+    chart_velo.height = 12  
     chart_velo.y_axis.title = "Nombre moyen de vélos"
     chart_velo.x_axis.title = "Communes"
 
@@ -201,7 +170,7 @@ def _graphiques(ws):
     data_occupation = Reference(ws, min_col=3, min_row=18, max_row=22)
     chart_line.add_data(data_occupation)
     
-    # Concatenat) des 2 graphiques 
+    # Concatenation des 2 graphiques 
     chart_line.y_axis.axId = 200
     chart_line.y_axis.title = "Taux d'occupation en (%)"
     chart_line.y_axis.crosses = "max"
@@ -209,35 +178,44 @@ def _graphiques(ws):
 
     ws.add_chart(chart_velo, "E18")
 
+
+def _inserer_carte(ws, image_path="data/carte_velib.png"):
+    # On intègre l'image 
+    if os.path.exists(image_path):
+        img = Image(image_path)
+        img.width = 550   
+        img.height = 400  
+        
+        # on colle l'image en N26
+        ws.add_image(img, "N26") 
+        print("La capture de la carte a bien été déplacée plus bas !")
+    else:
+        print(f"Note : ou est ma carte {image_path}, le rapport est généré sans image.")
+
+
 def _sauvegarde(wb, output_path):
-    # je sauvegarde quand même
     wb.save(output_path)
     wb.close()
-
     print("le fichier excel est op :", output_path)
 
 
-# La fonction principale
-def generate_excel_report(df_raw, df_top5, output_path="data/rapport_velib.xlsx"):
-    
+# La fonction principale 
+def generate_excel_report(df_raw, df_top5, output_path="data/mon_rapport_final.xlsx"):
     _creation_du_dossier(output_path)
     _onglet_data(df_raw, output_path)
     
     wb = _ouverture_du_fichier(output_path)
-    
-    # Nombre de lignes dans mon jeu de donnée, ici je compte avec len() c'est la bonne methode? 
     max_row = len(df_raw) + 1
 
     ws = _indicateurs(wb)
-    
-    # "ajout de la liste déroulante pour le filtre "
     _liste_deroulante_communes(ws, df_raw)
-    
     cols = _recup_colonne(df_raw)
     
     _kpi_du_reseau(ws, cols, max_row)
     _kpi_du_types_velos(ws, cols, max_row)
     _top5_communes(ws, df_top5)
     _graphiques(ws)
+    
+    _inserer_carte(ws, "data/carte_velib.png") # insertion de la carte
     
     _sauvegarde(wb, output_path)
