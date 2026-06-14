@@ -27,17 +27,18 @@ Les données proviennent de la plateforme Paris Data et représentent la disponi
 Le projet respecte l'architecture standard **src layout** vue en cour notamment :
 
 reporting_velib/
-├── data/                       # il contient le rapport générés et la carte au format png des stations de velib
+├── data/
 ├── notebooks/
-│   └── exploration.ipynb       # analyse exploratoire et graphiques 
 ├── src/
-│   └── reporting_velib/        # code et package
-│       ├── init.py
-│       ├── config.py           # configuration (URLs, chemins de donnée)
-│       ├── report.py           # pour généré le Dashboard excel avec openxl
-│       ├── utils.py            # fonctions de nettoyage et calculs 
-│       └── main.py             # Script principal 
-├── pyproject.toml              # Configuration du projet 
+│   └── reporting_velib/
+│       ├── __init__.py
+│       ├── config.py
+│       ├── report.py
+│       ├── utils.py
+│       └── main.py
+├── .gitignore
+├── README.md
+├── pyproject.toml
 └── uv.lock
 
 Ce projet utilise Uv pour une gestion rapide des dépendances, et pour lancé le projet, il faut exécuter la commande uv run velib
