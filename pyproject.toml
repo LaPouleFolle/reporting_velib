@@ -14,3 +14,11 @@ dependencies = [
     "geopandas>=1.1.3",
     "folium>=0.20.0",
 ]
+
+#  'reporting_velib' dans le dossier 'src/'.
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["reporting_velib*"]
+
+[project.scripts]
+velib = "reporting_velib.main:main"

@@ -4,9 +4,10 @@ from io import BytesIO
 import geopandas as gpd
 import pandas as pd
 import folium
-from src.report import generate_excel_report
-from src.utils import clean_data, compute_commune_analysis
-from src.config import URL_DATA_VELIB, OUTPUT_EXCEL, OUTPUT_CARTE
+# CHANGEMENT ICI : Importations adaptées à la nouvelle structure "src layout"
+from reporting_velib.report import generate_excel_report
+from reporting_velib.utils import clean_data, compute_commune_analysis
+from reporting_velib.config import URL_DATA_VELIB, OUTPUT_EXCEL, OUTPUT_CARTE
 
 def main():
     # importation des données 

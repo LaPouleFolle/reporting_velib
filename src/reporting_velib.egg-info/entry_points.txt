@@ -1,0 +1,2 @@
+[console_scripts]
+velib = reporting_velib.main:main
