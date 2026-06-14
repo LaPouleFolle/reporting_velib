@@ -27,18 +27,17 @@ Les données proviennent de la plateforme Paris Data et représentent la disponi
 Le projet respecte l'architecture standard **src layout** vue en cour notamment :
 
 reporting_velib/
-├── data/
+├── data/                       # il contient le rapport générés et la carte au format png des stations de velib
 ├── notebooks/
+│   └── exploration.ipynb       # analyse exploratoire et graphiques 
 ├── src/
-│   └── reporting_velib/
-│       ├── __init__.py
-│       ├── config.py
-│       ├── report.py
-│       ├── utils.py
-│       └── main.py
-├── .gitignore
-├── README.md
-├── pyproject.toml
+│   └── reporting_velib/        # code et package
+│       ├── init.py
+│       ├── config.py           # configuration (URLs, chemins de donnée)
+│       ├── report.py           # pour généré le Dashboard excel avec openxl
+│       ├── utils.py            # fonctions de nettoyage et calculs 
+│       └── main.py             # Script principal 
+├── pyproject.toml              # Configuration du projet 
 └── uv.lock
 
 Ce projet utilise Uv pour une gestion rapide des dépendances, et pour lancé le projet, il faut exécuter la commande uv run velib
@@ -46,3 +45,6 @@ Ce projet utilise Uv pour une gestion rapide des dépendances, et pour lancé le
 ## Maquette du rapport
 
 Cette maquette est une prévisualisation de mon rapport qui n'est pas définitive : 
+
+<img width="1193" height="653" alt="image" src="https://github.com/user-attachments/assets/97d7ed9f-7a7d-4816-8c3c-90661aa6350e" />
+
