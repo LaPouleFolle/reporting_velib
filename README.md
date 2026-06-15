@@ -46,5 +46,7 @@ Ce projet utilise Uv pour une gestion rapide des dépendances, et pour lancé le
 
 Cette maquette est une prévisualisation de mon rapport qui n'est pas définitive : 
 
-<img width="1193" height="653" alt="image" src="https://github.com/user-attachments/assets/97d7ed9f-7a7d-4816-8c3c-90661aa6350e" />
+Maquette finale: 
+<img width="750" height="385" alt="image" src="https://github.com/user-attachments/assets/4a7e956d-6abf-4ceb-b066-3a7516080ec9" />
+
 
